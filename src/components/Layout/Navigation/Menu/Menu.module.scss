@@ -22,10 +22,9 @@
     }
     @media (min-width: 900px) {
         .wrapper {
-            @include flex(center, center, row nowrap, 0.8rem, null, false);
+            @include flex(center, flex-end, row nowrap, 0.8rem, null, false);
             overflow: visible;
-            background: blue;
-            padding: unset;
+            padding: 0rem 1rem;
             width: 100%;
         }
     }

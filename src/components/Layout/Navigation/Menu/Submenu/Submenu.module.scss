@@ -33,7 +33,10 @@
         }
 
         .box {
+            background-color: $tertiary;
             position: absolute;
+            border-radius: 0 1dvh 1dvh 1dvh;
+            width: 22.5rem;
             padding: 1rem;
             &::after {
                 display: none;
