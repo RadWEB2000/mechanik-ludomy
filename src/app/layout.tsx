@@ -1,6 +1,10 @@
+import "css/Global.scss"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import Navigation from 'layout/Navigation/Navigation'
+import navigation from 'data/navigation'
+import logoImage from "assets/mechanik-ludomy-logo.webp";
+import LayoutProvider from "context/LayoutContext"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +20,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <LayoutProvider>
+        <body className={inter.className}>
+          <Navigation
+            brand={{
+              label:navigation.brand.label,
+              image:{
+                altText:"",
+                sourceUrl:logoImage,
+                title:""
+              },
+              uri:navigation.brand.uri
+            }}
+            menu={navigation.menu}
+            settings={{
+              menuButton:"MENU"
+            }}
+          />
+          {children}
+        </body>
+      </LayoutProvider>
     </html>
   )
 }

@@ -1,0 +1,57 @@
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
+
+.wrapper {
+    @include flex(center, flex-end, row nowrap, 0.15rem);
+    color: $color;
+}
+
+.button:hover,
+.label:hover {
+    color: $primary;
+    & > .line {
+        background-color: $primary;
+    }
+}
+
+.label {
+    @include font(1.75rem, 900, 1, uppercase, -1px, center);
+    padding: 0 1rem;
+}
+
+.button {
+    @include flex(center, space-evenly, column, null, null, false);
+    @include size(5rem, 5rem);
+    border-radius: 0.55dvh;
+    overflow: hidden;
+    position: relative;
+    &[data-open-menu='open'] {
+        & > .line {
+            background-color: $primary;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            &:nth-of-type(1) {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &:nth-of-type(2) {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.line {
+    @include size(4px, 100%);
+    background-color: $color;
+    border-radius: 2dvh;
+    transition: 0.15s linear background-color, 0.15s linear transform;
+}
+
+@media only screen {
+    @media (min-width: 900px) {
+        .wrapper {
+            display: none;
+        }
+    }
+}

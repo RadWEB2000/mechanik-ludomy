@@ -1,0 +1,43 @@
+@import '../../../../../styles/Mixins.scss';
+@import '../../../../../styles/Variables.scss';
+
+.box {
+    @include flex(flex-start, flex-start, column, null, 0.25rem);
+    background-color: rgba($background, 0.9);
+    padding: 1rem 1.5rem;
+}
+@media only screen {
+    @media (min-width: 412px) and (orientation: landscape) {
+        .box {
+            background-color: unset;
+            margin: 0.2rem 0;
+            padding: 1rem 2.85rem;
+            position: relative;
+            &::after {
+                @include size(100%, 0.12rem);
+                background-color: $color;
+                left: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    @media (max-width: 899.5px) {
+        .wrapper {
+            width: 100%;
+        }
+    }
+    @media (min-width: 900px) {
+        .wrapper {
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            padding: 1rem;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
