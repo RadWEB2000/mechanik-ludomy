@@ -60,10 +60,10 @@
     @media (min-width: 900px) {
         .wrapper {
             grid-template-rows: repeat(17, 1fr);
-            height: 8.5rem;
+            height: 7rem;
             overflow: visible;
             & > * {
-                height: 8.5rem !important;
+                height: 7rem !important;
             }
         }
         .brand {

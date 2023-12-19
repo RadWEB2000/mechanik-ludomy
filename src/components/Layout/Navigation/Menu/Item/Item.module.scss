@@ -81,9 +81,11 @@
     @media (min-width: 900px) {
         .expand,
         .regural {
+            background: violet;
             height: 2.55rem;
             & > a {
                 font-size: 1.75rem;
+                padding: 0rem 0.15rem;
             }
         }
 
