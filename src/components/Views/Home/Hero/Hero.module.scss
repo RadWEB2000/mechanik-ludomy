@@ -3,41 +3,104 @@
 
 .wrapper {
     @include backgroundCover();
-    @include size(minmax(100dvh, auto), 100%);
+    @include size(clamp(calc(100vh + 17rem), calc(100dvh + 17rem), auto), 100%);
     display: grid;
-    grid-template-areas:
-        'container container'
-        'container container'
-        'container container'
-        'container container'
-        'container container'
-        'details details'
-        'details details';
-    padding: 16rem 0.2rem 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 10rem 0.2rem 2rem;
+    row-gap: 15rem;
 }
 
-.container {
-    grid-area: container;
-    // background: lime;
+.headings {
+    grid-column: 1/-1;
     padding: 1rem;
-    & > .headings {
-        // background: violet;
-        & > * {
-            @include font(null, 800, 0.87, null, null, start);
-            font-family: $fontSpecial;
-            text-shadow: 0 0 2rem rgba($background, 0.8);
-        }
-        & > .title {
-            font-size: 8.5rem;
-        }
-        & > .slogan {
-            margin-top: 2.5rem;
-            font-size: 5rem;
+    margin-top: 10rem;
+    & > * {
+        font-family: $fontSpecial;
+        text-shadow: 0 0 2rem $background, 0 0 1rem $tertiary;
+    }
+    & > .title {
+        @include font(clamp(4rem, 7rem, 11.5rem), 900, 0.95, null, -0.55px, start);
+    }
+    & > .slogan {
+        @include font(4.5rem, 800, 1.1, null, -0.15px, start);
+        margin-top: 2rem;
+    }
+}
+
+.hours {
+    grid-column: 2/12;
+    padding: 3rem 2rem;
+    backdrop-filter: blur(1.2px) brightness(75%);
+    border: 0.2rem solid $color;
+    border-radius: 2dvh;
+    background-image: linear-gradient(
+        to bottom left,
+        rgba($tertiary, 0.74),
+        rgba($background, 0.75)
+    );
+    & > .title {
+        @include font(2.5rem, 500, 1.4, null, -0.15px, start);
+    }
+    & > .items {
+        margin-top: 0.8rem;
+        @include flex(flex-start, flex-start, column, null, 0.85rem);
+        & > .item {
+            @include flex(center, flex-start, row wrap, 1rem, 1rem);
+            & > * {
+                @include font(1.55rem, 500, 1.1, null, null, start);
+            }
+            & > dt {
+                font-weight: 700;
+            }
         }
     }
 }
 
-.informations {
-    grid-area: details;
-    background: purple;
+@media only screen {
+    @media (min-width: 500px) {
+        .headings {
+            & > .title {
+                font-size: 11rem;
+            }
+            & > .slogan {
+                font-size: 6rem;
+            }
+        }
+
+        .hours {
+            grid-column: 4/12;
+            width: clamp(5rem, 40rem, 100%);
+            margin: 0 0 0 auto;
+            & > .title {
+                font-size: 2.75rem;
+            }
+            & > .items {
+                margin-top: 2.6rem;
+                row-gap: 1.62rem;
+                & > .item {
+                    & > * {
+                        font-size: 1.666rem;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1000px) {
+        .wrapper {
+            padding-top: 15rem;
+        }
+        .headings {
+            & > .title {
+                font-size: 19rem;
+            }
+            & > .slogan {
+                font-size: 9rem;
+            }
+        }
+
+        .hours {
+            grid-column: 7/12;
+            grid-row: 2;
+        }
+    }
 }

@@ -6,17 +6,6 @@ export default function HomePage(){
   return(
     <>
       <Hero
-        address="Ludomy 93,<br/> 64-603 Ludomy"
-        // buttons={[
-        //   {
-        //     label:"Zadzwoń"  ,
-        //     uri:"tel:+48794100413"
-        //   },
-        //   {
-        //     label:"Usługi",
-        //     uri:"/uslugi"
-        //   }
-        // ]}
         image={heroImage.src}
         openingHours={{
             title:"Godziny otwarcia:",
