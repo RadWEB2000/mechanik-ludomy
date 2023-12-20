@@ -1,4 +1,4 @@
-import { Hero } from "views/Home"
+import { About, Hero } from "views/Home"
 import heroImage from "assets/mechanik-ludomy-hero.webp"
 
 export default function HomePage(){
@@ -39,6 +39,7 @@ export default function HomePage(){
         slogan="Patryk Łusiewicz"
         title="Mechanik Ludomy"
       />
+      <About/>
       <div>
         <h1>
           strona glowna
