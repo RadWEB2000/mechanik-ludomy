@@ -14,15 +14,34 @@
     &[data-open-menu='open'] {
         background-color: rgba($tertiary, 0.95);
         & > .menu {
-            height: calc(100dvh - 8.75rem);
+            height: calc(100dvh - 6.75rem);
+        }
+    }
+}
+
+.location {
+    width: 100%;
+    color: $color;
+    grid-column: 1/-1;
+    grid-row: 1;
+    margin-bottom: 0.6rem;
+    & > a {
+        @include flex(center, flex-end, row nowrap, 1rem);
+        @include font(1.65rem, 700, 1, null, null, start);
+        color: $secondary;
+        padding: 0.5rem 1rem;
+        transition: 0.15s linear filter;
+        &:focus-within,
+        &:hover {
+            filter: brightness(125%);
         }
     }
 }
 
 .brand,
 .settings {
-    grid-row: 1;
-    height: 8.75rem;
+    grid-row: 2;
+    height: 6.75rem;
 }
 
 .brand {
@@ -37,7 +56,7 @@
 
 .menu {
     grid-column: 1/-1;
-    grid-row: 2;
+    grid-row: 3;
     height: 0;
     transition: 0.25s ease-in-out height;
 }
@@ -59,18 +78,22 @@
     @media (min-width: 900px) {
         .wrapper {
             grid-template-columns: repeat(23, 1fr);
-            height: 7rem;
+            height: clamp(5rem, 7.5rem, 10rem);
             overflow: visible;
-            & > * {
-                height: 7rem !important;
-            }
         }
+
+        .brand,
+        .menu,
+        .settings {
+            grid-row: 2;
+            height: calc(7.5rem - 1.92rem) !important;
+        }
+
         .brand {
             grid-column: 1/4;
         }
         .menu {
             grid-column: 4/23;
-            grid-row: 1;
         }
         .settings {
             grid-column: 23/-1;
@@ -78,22 +101,31 @@
     }
     @media (min-width: 1440px) {
         .wrapper {
-            height: 8rem;
+            background-color: rgba($background, 0.7);
+            height: clamp(5rem, 7.75rem, 10rem);
+
             &[data-open-menu='close'],
             &[data-open-menu='open'],
             & > * {
-                height: 8rem !important;
+                background-color: rgba($background, 0.7);
             }
+        }
+
+        .brand,
+        .menu,
+        .settings {
+            height: calc(7.75rem - 1.92rem) !important;
         }
     }
     @media (min-width: 1500px) {
         .wrapper {
-            height: 8.45rem;
-            &[data-open-menu='close'],
-            &[data-open-menu='open'],
-            & > * {
-                height: 8.45rem !important;
-            }
+            height: clamp(5rem, 8.15rem, 10rem);
+        }
+
+        .brand,
+        .menu,
+        .settings {
+            height: calc(8.45rem - 1.92rem) !important;
         }
     }
 }

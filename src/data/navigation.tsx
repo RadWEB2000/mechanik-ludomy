@@ -1,14 +1,17 @@
 import { tBrand, tMenu } from 'ts/types';
+import { ImPhone } from "react-icons/im";
 
 type t_navigation = {
     brand: tBrand;
+    location:string;
     menu: tMenu[];
     settings: {
-        specialButtons?: {
-            label: string;
-            uri: string;
-        }[];
         menuButton: string;
+        phoneButton:{
+            icon:React.ReactNode;
+            label:string;
+            uri:string;
+        }
     };
 };
 
@@ -17,6 +20,7 @@ const navigation: t_navigation = {
         label: 'Mechanik Ludomy',
         uri: '/',
     },
+    location:'Ludomy 93, 64-603 Ludomy',
     menu: [
         {
             label: 'Start',
@@ -83,16 +87,11 @@ const navigation: t_navigation = {
     ],
     settings: {
         menuButton: 'MENU',
-        specialButtons: [
-            {
-                label: 'Kontakt',
-                uri: '/kontakt',
-            },
-            {
-                label: 'Zadzwoń',
-                uri: 'tel:+48500361007',
-            },
-        ],
+        phoneButton: {
+            icon:<ImPhone />,
+            label:"Numer telefonu",
+            uri:"+48794100413"
+        }
     },
 };
 

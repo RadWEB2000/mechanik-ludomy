@@ -1,0 +1,43 @@
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
+
+.wrapper {
+    @include backgroundCover();
+    @include size(minmax(100dvh, auto), 100%);
+    display: grid;
+    grid-template-areas:
+        'container container'
+        'container container'
+        'container container'
+        'container container'
+        'container container'
+        'details details'
+        'details details';
+    padding: 16rem 0.2rem 1rem;
+}
+
+.container {
+    grid-area: container;
+    // background: lime;
+    padding: 1rem;
+    & > .headings {
+        // background: violet;
+        & > * {
+            @include font(null, 800, 0.87, null, null, start);
+            font-family: $fontSpecial;
+            text-shadow: 0 0 2rem rgba($background, 0.8);
+        }
+        & > .title {
+            font-size: 8.5rem;
+        }
+        & > .slogan {
+            margin-top: 2.5rem;
+            font-size: 5rem;
+        }
+    }
+}
+
+.informations {
+    grid-area: details;
+    background: purple;
+}

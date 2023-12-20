@@ -15,7 +15,7 @@ type tSubmenu = {
 }
 
 export default function Submenu(props:tSubmenu){
-    const [isOpenDropdown,setIsOpenDropdown] = useState(true);
+    const [isOpenDropdown,setIsOpenDropdown] = useState(false);
    
     return(
         <li className={styles.wrapper}>

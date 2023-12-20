@@ -1,0 +1,12 @@
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
+
+.wrapper {
+    @include flex(center, center);
+    @include size(4rem, 4rem);
+    border-radius: 0.75dvh;
+    background-color: $secondary;
+    font-size: 2.7rem;
+    color: $background;
+    transition: 0.12s linear filter;
+}

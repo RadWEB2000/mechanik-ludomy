@@ -32,10 +32,9 @@ export default function RootLayout({
               },
               uri:navigation.brand.uri
             }}
+            location={navigation.location}
             menu={navigation.menu}
-            settings={{
-              menuButton:"MENU"
-            }}
+            settings={navigation.settings}
           />
           {children}
         </body>
