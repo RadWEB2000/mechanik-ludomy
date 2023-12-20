@@ -78,7 +78,22 @@
     }
     @media (min-width: 1440px) {
         .wrapper {
-            background: lime;
+            height: 8rem;
+            &[data-open-menu='close'],
+            &[data-open-menu='open'],
+            & > * {
+                height: 8rem !important;
+            }
+        }
+    }
+    @media (min-width: 1500px) {
+        .wrapper {
+            height: 8.45rem;
+            &[data-open-menu='close'],
+            &[data-open-menu='open'],
+            & > * {
+                height: 8.45rem !important;
+            }
         }
     }
 }

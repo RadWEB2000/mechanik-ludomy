@@ -102,4 +102,28 @@
             }
         }
     }
+    @media (min-width: 1550px) {
+        .expand,
+        .regural {
+            height: 2.75rem;
+            & > a {
+                font-size: 2.1rem;
+                padding: 0rem 0.35rem;
+            }
+        }
+
+        .expand {
+            & > button {
+                font-size: 2.5rem;
+            }
+        }
+
+        .submenu {
+            height: minmax(2rem, auto);
+            & > a {
+                @include itemAnimate();
+                font-size: 1.8rem;
+            }
+        }
+    }
 }
