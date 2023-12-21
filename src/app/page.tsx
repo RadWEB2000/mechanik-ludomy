@@ -39,7 +39,7 @@ export default function HomePage(){
         slogan="Patryk Łusiewicz"
         title="Mechanik Ludomy"
       />
-      <About/>
+      {/* <About/> */}
       <div>
         <h1>
           strona glowna
