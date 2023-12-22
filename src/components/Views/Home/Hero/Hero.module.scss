@@ -2,37 +2,107 @@
 @import '../../../../styles/Variables.scss';
 
 .wrapper {
-    background: red;
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    height: calc(90dvh - 7rem);
-    & > div {
-        @include flex(center, flex-start);
-        background-color: $quinary;
-        grid-column: 1/12;
-        padding: 4rem;
-        & > hgroup {
-            @include flex(flex-start, flex-start, column, null, 1rem);
+    height: minmax(calc(90dvh - 7rem), auto);
+    & > * {
+        grid-column: 1/-1;
+        height: 70dvh;
+    }
+}
+
+.headings {
+    background-color: $quinary;
+    padding: 4rem 1rem;
+    @include flex(flex-start, center, column, null, 1rem);
+    & > * {
+        font-family: $fontSpecial;
+        text-shadow: 0.5rem 0.5rem 1rem rgba($quatenary, 0.6);
+    }
+}
+
+.title {
+    @include font(8.12rem, 900, 1, null, -1px, start);
+}
+
+.slogan {
+    @include font(4.5rem, 900, 1, null, -1px, start);
+}
+
+.movie__box {
+    position: relative;
+}
+
+.movie {
+    @include size(100%, 100%);
+    object-fit: cover;
+    object-position: center;
+}
+
+@media only screen {
+    @media (min-width: 700px) {
+        .wrapper {
             & > * {
-                font-family: $fontSpecial;
-            }
-            & > h1 {
-                @include font(20rem, 900, 1, null, -1px, start);
-            }
-            & > h2 {
-                @include font(10rem, 900, 1, null, -1px, start);
+                height: 70dvh;
             }
         }
-    }
+        .headings {
+            padding: 4rem 3rem;
+            row-gap: 2rem;
+        }
 
-    & > figure {
-        grid-column: 12/-1;
-        background: lime;
-        position: relative;
-        & > video {
-            @include size(100%, 100%);
-            object-fit: cover;
-            object-position: center;
+        .title {
+            font-size: 15rem;
+        }
+
+        .slogan {
+            font-size: 7.12rem;
+        }
+    }
+    @media (min-width: 1000px) {
+        .wrapper {
+            & > * {
+                height: 85dvh;
+            }
+        }
+
+        .headings {
+            grid-column: 1/14;
+            padding: 4rem 3rem;
+            row-gap: 2rem;
+        }
+
+        .title {
+            font-size: 11rem;
+        }
+
+        .slogan {
+            font-size: 6.12rem;
+        }
+        .movie__box {
+            grid-column: 14/-1;
+        }
+    }
+    @media (min-width: 1550px) {
+        .wrapper {
+            & > * {
+                height: 91dvh;
+            }
+        }
+
+        .headings {
+            grid-column: 1/12;
+        }
+
+        .title {
+            font-size: 15.5rem;
+        }
+
+        .slogan {
+            font-size: 7.12rem;
+        }
+        .movie__box {
+            grid-column: 12/-1;
         }
     }
 }

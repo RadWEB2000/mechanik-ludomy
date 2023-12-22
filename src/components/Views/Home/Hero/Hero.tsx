@@ -1,7 +1,4 @@
-import { tImage } from "ts/types";
-import Image from "next/image";
 import styles from "views/Home/Hero/Hero.module.scss";
-import Link from "next/link";
 
 type tHero = {
     image:string;
@@ -19,15 +16,14 @@ type tHero = {
 export default function Hero(props:tHero){
     return (
         <header className={styles.wrapper}>
-            <div>
-                <hgroup>
-                    <h1>{props.title}</h1>
-                    <h2>{props.slogan}</h2>
-                </hgroup>
-            </div>
-            <figure>
+            <hgroup className={styles.headings}>
+                <h1 className={styles.title}>{props.title}</h1>
+                <h2 className={styles.slogan}>{props.slogan}</h2>
+            </hgroup>
+            <figure className={styles.movie__box}>
                 <video
                     autoPlay
+                    className={styles.movie}
                     crossOrigin="anonymous"
                     disablePictureInPicture
                     disableRemotePlayback

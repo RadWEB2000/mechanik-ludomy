@@ -4,7 +4,7 @@
 .wrapper {
     @include size(clamp(7.2rem, 7.2rem, auto), 100%);
     background-color: rgba($quatenary, 0.7);
-    backdrop-filter: blur(1.2px);
+    backdrop-filter: blur(0.6rem);
     box-shadow: 0 1rem 1rem rgba($quatenary, 0.5);
     display: grid;
     grid-template-columns: repeat(21, 1fr);
