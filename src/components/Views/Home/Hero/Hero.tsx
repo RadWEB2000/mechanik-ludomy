@@ -18,8 +18,13 @@ type tHero = {
 
 export default function Hero(props:tHero){
     return (
-        <div>
-            <div></div>
+        <header className={styles.wrapper}>
+            <div>
+                <hgroup>
+                    <h1>{props.title}</h1>
+                    <h2>{props.slogan}</h2>
+                </hgroup>
+            </div>
             <figure>
                 <video
                     autoPlay
@@ -28,11 +33,10 @@ export default function Hero(props:tHero){
                     disableRemotePlayback
                     preload="metadata"
                     muted
+                    src="heroMovie.mp4"
                     loop
-                >
-                    <source src="heroMovie.mp4" type="mp4"/>
-                </video>
+                />
             </figure>
-        </div>
+        </header>
     )
 }

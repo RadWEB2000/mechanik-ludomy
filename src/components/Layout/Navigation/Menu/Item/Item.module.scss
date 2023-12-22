@@ -55,74 +55,47 @@
 }
 
 @media only screen {
-    @media (min-width: 412px) and (orientation: landscape) {
-        .expand,
-        .regural {
-            height: 4.15rem;
-            & > a {
-                font-size: 3.15rem;
-            }
-        }
-
-        .expand {
-            & > button {
-                font-size: 3.15rem;
-            }
-        }
-
-        .submenu {
-            height: minmax(3rem, auto);
-            & > a {
-                @include itemAnimate();
-                font-size: 1.85rem;
-            }
-        }
-    }
     @media (min-width: 900px) {
         .expand,
         .regural {
             height: 2.55rem;
             & > a {
-                font-size: 1.75rem;
+                font-size: 1.58rem;
                 padding: 0rem 0.15rem;
             }
         }
 
         .expand {
             & > button {
-                font-size: 2.15rem;
+                font-size: 1.95rem;
             }
         }
 
         .submenu {
-            height: minmax(2rem, auto);
             & > a {
-                @include itemAnimate();
-                font-size: 1.5rem;
+                font-size: 1.45rem;
+                letter-spacing: -0.25px;
             }
         }
     }
-    @media (min-width: 1550px) {
+    @media (min-width: 1100px) {
         .expand,
         .regural {
-            height: 2.75rem;
             & > a {
-                font-size: 2.1rem;
+                font-size: 2rem;
                 padding: 0rem 0.35rem;
             }
         }
 
         .expand {
             & > button {
-                font-size: 2.5rem;
+                font-size: 2.55rem;
             }
         }
 
         .submenu {
-            height: minmax(2rem, auto);
             & > a {
-                @include itemAnimate();
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
         }
     }

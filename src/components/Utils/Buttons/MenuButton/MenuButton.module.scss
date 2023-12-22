@@ -15,13 +15,13 @@
 }
 
 .label {
-    @include font(1.75rem, 900, 1, uppercase, -1px, center);
+    @include font(1.55rem, 900, 1, uppercase, -1px, center);
     padding: 0 1rem;
 }
 
 .button {
     @include flex(center, space-evenly, column, null, null, false);
-    @include size(5rem, 5rem);
+    @include size(4.25rem, 4.25rem);
     border-radius: 0.55dvh;
     overflow: hidden;
     position: relative;

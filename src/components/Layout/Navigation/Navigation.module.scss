@@ -2,121 +2,146 @@
 @import '../../../styles/Variables.scss';
 
 .wrapper {
-    @include grid(null, null, repeat(12, 1fr), null, 0.12rem, 0.12rem);
-    @include size(clamp(5rem, 7rem, auto), 100%);
-    background-color: rgba($background, 0.95);
-    backdrop-filter: blur(1.75px);
-    color: $color;
+    @include size(clamp(7.2rem, 7.2rem, auto), 100%);
+    background-color: rgba($quatenary, 0.7);
+    backdrop-filter: blur(1.2px);
+    box-shadow: 0 1rem 1rem rgba($quatenary, 0.5);
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: 2.2rem 5rem auto;
     overflow: hidden;
-    position: fixed;
-    transition: 0.25s ease-in-out background-color;
+    position: sticky;
+    top: 0;
     z-index: 999;
-    &[data-open-menu='open'] {
-        background-color: rgba($tertiary, 0.95);
+    &[data-open-menu='close'] {
         & > .menu {
-            height: calc(100dvh - 6.75rem);
+            height: 0;
+        }
+    }
+    &[data-open-menu='open'] {
+        background-color: rgba($quatenary, 1);
+        & > .menu {
+            height: calc(100vh - 7.2rem);
         }
     }
 }
-
 .location {
-    width: 100%;
-    color: $color;
-    grid-column: 1/-1;
+    grid-column: 6/-1;
     grid-row: 1;
     & > a {
-        @include flex(center, flex-end, row nowrap, 1rem);
-        @include font(1.65rem, 700, 1, null, null, start);
-        color: $secondary;
-        padding: 0.5rem 1rem;
-        transition: 0.15s linear filter;
+        @include flex(center, flex-end, row nowrap, 0.74rem);
+        @include size(100%, 100%);
+        color: $color;
+        transition: 0.12s ease-in-out color;
         &:focus-within,
         &:hover {
-            filter: brightness(125%);
+            color: $secondary;
         }
     }
-}
-
-.brand,
-.settings {
-    grid-row: 2;
-    height: 6.75rem;
 }
 
 .brand {
-    grid-column: 1/4;
+    grid-column: 1/6;
     grid-row: 1/3;
-    height: 100%;
 }
-
-.settings {
-    @include flex(center, flex-end, row nowrap, 0.6rem, null, true);
-    grid-column: 4/-1;
-    padding: 0 2rem 0 1rem;
-}
-
 .menu {
     grid-column: 1/-1;
     grid-row: 3;
-    height: 0;
-    transition: 0.25s ease-in-out height;
+    transition: 0.12s linear height;
+}
+
+.settings {
+    @include flex(center, flex-end, row nowrap);
+    grid-column: 6/-1;
+    padding: 0rem 0.75rem;
+    grid-row: 2;
 }
 
 @media only screen {
-    @media (min-width: 412px) and (orientation: landscape) {
+    @media (min-width: 900px) {
         .wrapper {
+            @include size(clamp(7.9rem, 7.9rem, auto), 100%);
+            grid-template-rows: 2.9rem 5rem;
+            overflow: visible;
+            &[data-open-menu='close'],
             &[data-open-menu='open'] {
+                background-color: rgba($quatenary, 0.7);
                 & > .menu {
-                    height: calc(100dvh - 6.5rem);
+                    height: unset;
                 }
             }
         }
-        .brand,
-        .settings {
-            height: 6.5rem;
-        }
-    }
-    @media (min-width: 900px) {
-        .wrapper {
-            grid-template-columns: repeat(23, 1fr);
-            grid-template-rows: 2.85rem 7.5rem;
-            height: clamp(5rem, 7.5rem, auto);
-            overflow: visible;
-        }
-
         .location {
-            grid-column: 3/-1;
-            grid-row: 1;
+            grid-column: 4/-1;
+            & > a {
+                padding: 0.4rem 0.95rem;
+            }
         }
 
         .brand {
-            // background: aqua !important;
-            grid-column: 1/3;
-            grid-row: 1/-1;
-            height: 100%;
+            grid-column: 1/4;
+            grid-row: 1/3;
         }
         .menu {
-            grid-column: 3/23;
-            height: 100%;
-            // height: 7.5rem;
+            grid-column: 4/20;
             grid-row: 2;
         }
+
         .settings {
-            // height: 7.5rem;
-            height: 100%;
-            grid-column: 23/-1;
-            grid-row: 2;
+            grid-column: 20/-1;
+            padding: 0rem 0.75rem;
         }
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 1045px) {
         .wrapper {
-            background-color: rgba($background, 0.7);
-            // height: clamp(5rem, 7.75rem, 10rem);
-            &[data-open-menu='close'],
-            &[data-open-menu='open'],
-            & > * {
-                background-color: rgba($background, 0.7);
+            @include size(clamp(calc(3.2rem + 6.5rem), calc(3.2rem + 6.5rem), auto), 100%);
+            grid-template-columns: repeat(25, 1fr);
+            grid-template-rows: 3.2rem 6.5rem;
+        }
+        .location {
+            grid-column: 5/-1;
+            & > a {
+                padding: 0.4rem 0.95rem;
             }
+        }
+
+        .brand {
+            grid-column: 1/5;
+        }
+        .menu {
+            grid-column: 5/24;
+        }
+
+        .settings {
+            grid-column: 24/-1;
+            padding: 0rem 1.15rem 0rem 0.12rem;
+        }
+    }
+    @media (min-width: 1550px) {
+        .wrapper {
+            @include size(clamp(calc(3.2rem + 6.5rem), calc(3.2rem + 6.5rem), auto), 100%);
+            grid-template-columns: repeat(31, 1fr);
+            grid-template-rows: minmax(3.2rem, auto) minmax(6.5rem, auto);
+            row-gap: 0.8rem;
+        }
+        .location {
+            grid-column: 5/-1;
+            & > a {
+                font-size: 1.9rem;
+                padding: 0.2rem 1.95rem;
+            }
+        }
+
+        .brand {
+            grid-column: 1/5;
+        }
+        .menu {
+            grid-column: 5/30;
+        }
+
+        .settings {
+            grid-column: 30/-1;
+            padding: 0rem 1.15rem 0rem 0.12rem;
         }
     }
 }
