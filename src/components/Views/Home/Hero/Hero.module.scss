@@ -8,15 +8,13 @@
     height: calc(90dvh - 7rem);
     & > div {
         @include flex(center, flex-start);
-        background-attachment: fixed;
-        background-image: linear-gradient(to bottom, $quinary, $quinary, $primary);
+        background-color: $quinary;
         grid-column: 1/12;
         padding: 4rem;
         & > hgroup {
             @include flex(flex-start, flex-start, column, null, 1rem);
             & > * {
                 font-family: $fontSpecial;
-                text-shadow: 2rem 2rem 2rem rgba($quatenary, 0.3);
             }
             & > h1 {
                 @include font(20rem, 900, 1, null, -1px, start);
