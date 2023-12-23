@@ -1,4 +1,4 @@
-import { About, Hero } from "views/Home"
+import { About, Hero, Workplace } from "views/Home"
 import heroImage from "assets/mechanik-ludomy-hero.webp"
 
 export default function HomePage(){
@@ -39,12 +39,38 @@ export default function HomePage(){
         slogan="Patryk Łusiewicz"
         title="Mechanik Ludomy"
       />
-      {/* <About/> */}
-      <div>
-        <h1>
-          strona glowna
-        </h1>
-      </div>
+      {/* <Workplace
+        title="Godziny otwarcia"
+        hours={[
+            {
+              day:"Poniedziałek",
+              end:"18:00",
+              start:"10:00"
+            },
+            {
+              day:"Wtorek",
+              end:"18:00",
+              start:"10:00"
+            },
+            {
+              day:"Środa",
+              end:"18:00",
+              start:"10:00"
+            },
+            {
+              day:"Czwartek",
+              end:"18:00",
+              start:"10:00"
+            },
+            {
+              day:"Piątek",
+              end:"18:00",
+              start:"10:00"
+            },
+        ]}
+      /> */}
+      <About/>
+        
     </>
   )
 }

@@ -7,7 +7,7 @@
     height: minmax(calc(90dvh - 7rem), auto);
     & > * {
         grid-column: 1/-1;
-        height: 70dvh;
+        height: 85dvh;
     }
 }
 
@@ -41,11 +41,6 @@
 
 @media only screen {
     @media (min-width: 700px) {
-        .wrapper {
-            & > * {
-                height: 70dvh;
-            }
-        }
         .headings {
             padding: 4rem 3rem;
             row-gap: 2rem;
@@ -60,12 +55,6 @@
         }
     }
     @media (min-width: 1000px) {
-        .wrapper {
-            & > * {
-                height: 85dvh;
-            }
-        }
-
         .headings {
             grid-column: 1/14;
             padding: 4rem 3rem;

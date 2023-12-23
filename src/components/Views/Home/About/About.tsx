@@ -1,17 +1,18 @@
 import Image from "next/image";
+import styles from "views/Home/About/About.module.scss"
+
 
 export default function About(){
     return(
-        <div>
-            <section>
-                <header>
-                    <h2>O firmie</h2>
+        <div className={styles.wrapper}>
+            <section className={styles.content}>
+                <header className={styles.title__box}>
+                    <h2 className={styles.title}>O firmie</h2>
                 </header>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam molestias asperiores iusto quas itaque fugit deserunt, nostrum possimus. Enim eveniet numquam saepe aliquam, dignissimos laudantium harum nobis odio laborum corrupti.
-                Modi obcaecati minima laborum vitae sit odio iure voluptate totam vel culpa a animi ex quidem praesentium deserunt molestiae recusandae excepturi consequatur ratione sequi, nobis quibusdam voluptatibus quam? Cupiditate, tempore?
-                Excepturi vel, labore sed deleniti sequi tempora. Fugit omnis temporibus quidem nostrum, error quod aliquam vitae eaque consectetur sunt accusantium odit, recusandae soluta ut, exercitationem ducimus nobis reiciendis eum.</p>
+                <p className={styles.text}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam molestias asperiores iusto quas itaque fugit deserunt, nostrum possimu m ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam molestias asperiores iusto quas itaque fugit deserunt, nostrum possim</p>
             </section>
-            <figure>
+            <div className={styles.image__box}>
+            <figure className={styles.image}>
                <Image
                 alt={""}
                 fill
@@ -26,6 +27,7 @@ export default function About(){
                 quality={100}
             />
             </figure>
+            </div>
         </div>
     )
 }
