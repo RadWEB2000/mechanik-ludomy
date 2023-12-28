@@ -31,7 +31,8 @@
   $lineHeight: null,
   $textTransform: null,
   $letterSpacing: null,
-  $align: null
+  $align: null,
+  $family: null
 ) {
   font-size: $size;
   font-weight: $weight;
@@ -46,6 +47,9 @@
   }
   @if $align != null {
     text-align: $align;
+  }
+  @if $family != null {
+    font-family: $family;
   }
 }
 
@@ -102,5 +106,17 @@
 
   @if $rows != null {
     grid-row: $rows;
+  }
+}
+
+
+@mixin visibility($isPower:true){
+  @if $isPower == true {
+    opacity: 1;
+    visibility: visible;
+  }
+  @if $isPower == false {
+    opacity: 0;
+    visibility: hidden;
   }
 }

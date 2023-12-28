@@ -1,0 +1,60 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,center,row nowrap,.6rem,null,false);
+    background-color: hsla(0, 0%, 0%, 0.251);
+    backdrop-filter: blur(2px);
+    border:4px solid #fff;
+    border-radius: 5rem;
+    height: 4.5rem;
+    overflow-y: hidden;
+    position: relative;
+    & > span {
+        @include font(2.22rem,700,1,uppercase,null,center,$fontPoppins);
+        @include flex(center,center);
+        height: 100%;
+        color: #fff;
+        padding: 0 1.75rem;
+        position: relative;
+    }
+    & > i {
+        @include flex(center,center);
+        @include size(4.5rem,0);
+        @include visibility(false);
+        color: #fff;
+        font-size: 2.3rem;
+        transform: translateY(100%);
+        transition:.25s linear opacity, .25s linear transform,.25s linear visibility, .25s linear width;
+    }
+
+    &:has(:focus-within, :hover){
+        & > i {
+            @include visibility(true);
+            transform: translateY(0%);
+            width: 4.5rem;
+        }
+    }
+}
+
+@media only screen {
+    @media (min-width:550px){
+        .wrapper {
+            height: 5.5rem;
+            & > span {
+                font-size: 2.8rem;
+                padding: 0rem 2.5rem;
+            }
+            & > i {
+                height: 5.5rem;
+                font-size: 3.2rem;
+            }
+            &:has(:focus-within, :hover){
+                & > i {
+                    @include visibility(true);
+                    width: 5.5rem;
+                }
+            }
+        }       
+    }
+}

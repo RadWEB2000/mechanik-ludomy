@@ -1,0 +1,113 @@
+// @import "../../../../styles/Global.scss";
+@import "../../../../styles/Mixins.scss";
+// @import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include grid("layer",100%, 100%);
+    @include size(106svh,100%);
+    // background: lime;
+    perspective: 3;
+
+    & > *{
+        @include size(100%,100%);
+        grid-area: layer;
+    }
+}
+
+.content {
+    @include flex(flex-start,center,column,null,2rem,true);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.12),rgba(133, 20, 20, 0.3),rgba(0, 0, 0, 0.5) );
+    padding: 4rem 1rem;
+    z-index: 1;
+    & > .headings {
+        font-family: $fontBlackOps;
+        color: #fff;
+        text-shadow: 1rem 1rem 13rem #000;
+        width: 75%;
+        & > * {
+            @include font(null,900,.9 ,null,1px,start);
+        }
+        & > .title {
+            font-size: 6.25rem;
+            line-height: 0.9;
+          
+        }
+        & > .slogan {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-top: 3rem;
+        }
+    }
+    & > .buttons {
+        @include flex(center,flex-start, row wrap, .5rem, .5rem,true);
+        margin-top: 3rem;
+        padding: 0rem 1rem;
+    }
+}
+
+.video__box {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    & > .video {
+        @include size(100%,100%);
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+@media only screen {
+    @media (min-width:550px){
+        .content {
+            padding: 4rem 3rem;
+            & > .headings {
+                width: 95%;
+                & > .title {
+                    font-size: 8.75rem;
+                
+                }
+                & > .slogan {
+                    font-size: 4.1rem;
+                    margin-top: 1rem;
+                }
+            }
+            & > .buttons {
+                @include flex(center,flex-start, row wrap, 1.5rem, 1.5rem,true);
+                margin-top: 1rem;
+                padding: 0rem ;
+            }
+        }  
+    }
+    @media (min-width:700px){
+        .content {
+            padding: 4rem 3rem;
+            & > .headings {
+                width: 95%;
+                & > .title {
+                    font-size: 11rem;
+                
+                }
+                & > .slogan {
+                    font-size: 4.4rem;
+                }
+            }
+        }  
+    }
+    @media (min-width:1200px){
+        .content {
+            padding: 4rem 7rem;
+            & > .headings {
+                width: clamp(2rem,85rem,75%);
+                & > .title {
+                    font-size: 13.65rem;
+                
+                }
+                & > .slogan {
+                    font-size: 6.4rem;
+                }
+            }
+        }  
+    }
+}

@@ -1,7 +1,7 @@
 import 'css/Global.scss';
-import 'css/Utils.scss';
-import 'css/Mixins.scss';
-import 'css/Variables.scss';
+// import 'css/Utils.scss';
+// import 'css/Mixins.scss';
+// import 'css/Variables.scss';
 
 export const metadata = {
     title: 'Create Next App',

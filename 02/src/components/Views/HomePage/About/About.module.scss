@@ -1,0 +1,134 @@
+// @import "../../../../styles/Global.scss";
+@import "../../../../styles/Mixins.scss";
+// @import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    // background: pink;
+    display: grid;
+    grid-template-columns: repeat(21,1fr);
+    margin: auto;
+    width:clamp(5rem,145rem,95%);
+    gap: 1rem;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+}
+
+.box {
+    grid-row: 2;
+    padding: 2rem;
+    & > .title {
+        @include font(7rem,700,1.2,null,null,start,$fontAnton);
+        color:#fd470f;
+    }
+
+    & > .content {
+        @include font(1.55rem,400,1.9,null,null,start);
+        text-wrap: balance;
+        margin-bottom: 2rem;
+    }
+
+}
+
+.motto {
+    @include flex(center,center);
+    @include font(7rem,900,1.2,null,1.4px,center,$fontAlfa);
+    color: rgba(255, 217, 0, 0);
+    grid-row: 1;
+    -webkit-text-stroke: 1px #808080;
+}
+
+.image {
+    background: purple;
+    aspect-ratio: 4/4.2;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    grid-row: 3;
+}
+
+@media only screen {
+    @media (min-width:700px){
+            .box {
+                & > .title {
+                    font-size: 11rem;
+                }
+
+                & > .content {
+                    font-size: 1.7rem;
+                    line-height: 2.2;
+                }
+
+            }
+
+            .motto {
+                font-size: 9rem;
+            }
+
+            .image {
+                background: purple;
+                aspect-ratio: 16/9;
+                padding: 1rem;
+                border-radius: 1rem;
+                position: relative;
+                overflow: hidden;
+                grid-row: 3;
+            }
+    }
+
+    @media (min-width:900px){
+        .wrapper {
+            gap:5rem 1rem;
+
+        }
+        .box {
+            grid-column: 1/13;
+            grid-row:1 ;
+            & > .title {
+                font-size: 11.2rem;
+            }
+
+            & > .content {
+                font-size: 1.7rem;
+                line-height: 2.1;
+            }
+
+        }
+
+        .motto {
+            font-size: 8rem;
+            grid-column: 13/-1;
+            grid-row: 1;
+        }
+
+        .image {
+            grid-row: 2;
+        }       
+    }
+    @media (min-width:1400px){
+        .wrapper {
+            gap:7rem 1rem;
+
+        }
+        .box {
+            grid-column: 1/12;
+            & > .title {
+                font-size: 15rem;
+            }
+
+            & > .content {
+                font-size: 1.9rem;
+            }
+
+        }
+
+        .motto {
+            font-size: 9rem;
+            grid-column: 12/-1;
+        }
+    }
+}
