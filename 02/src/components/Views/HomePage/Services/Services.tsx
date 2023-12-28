@@ -19,7 +19,11 @@ type tServices = {
 
 export default function Services(props:tServices){
     return(
-        <div>
+        <div
+            style={{
+                backgroundColor:"red"
+            }}
+        >
             <div>
                 <h2>{props.title}</h2>
                 <p dangerouslySetInnerHTML={{__html:props.excerpt}} />
