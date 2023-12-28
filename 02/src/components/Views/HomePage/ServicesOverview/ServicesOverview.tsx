@@ -1,7 +1,4 @@
-"use client"
-import Link from "next/link";
 import css from "views/HomePage/ServicesOverview/ServicesOverview.module.scss";
-import {motion} from "framer-motion";
 import { ReadMoreButton } from "app/components/Utils/Buttons";
 
 
