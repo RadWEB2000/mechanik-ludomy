@@ -1,0 +1,32 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.recommended__wrapper {
+    display: grid;
+    grid-template-rows: calc(100% - 25rem) 25rem;
+    height: 100%;
+    width: 40rem;
+    & > figure {
+        position: relative;
+    }
+    & > div {
+        @include flex(flex-start,flex-start,column,null,1rem);
+        padding: 1rem;
+        & > h4 {
+            @include font(3rem,600,1.1,null,null,start);
+        }
+        & > p {
+            color: #ddd;
+        }
+        & > a {
+            @include font(1.7rem,800,1,null,null,center);
+            display: flex;
+            position: relative;
+            transition: .12s linear color;
+            &:focus-within,
+            &:hover {
+                color: orangered;
+            }
+        }
+    }
+}

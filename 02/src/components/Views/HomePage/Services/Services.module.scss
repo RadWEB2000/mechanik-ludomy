@@ -170,5 +170,13 @@
             margin: 11rem 0rem;
             padding: 16rem 1rem;
         }
+          .container {
+            & > .title {
+                font-size: 14rem;
+            }
+            & > .content, & > .excerpt {
+                line-height: 2.3;
+            }
+        }
     }
 }
