@@ -3,6 +3,69 @@
 // @import "../../../../styles/Utils.scss";
 @import "../../../../styles/Variables.scss";
 
+
+@keyframes animatedBackground {
+    0% {
+        background-color: hsl(9, 100%, 52%,0%);
+    }
+   
+    40%, 95% {
+        background-color: hsl(9, 100%, 52%);
+    }
+}
+
 .wrapper {
-    background-color:red;
+    animation: animatedBackground 4s ease-in-out forwards;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 120%;
+    animation-timeline: view(y);
+    padding: 3rem 5rem;
+    margin: 5rem 0rem;
+    transition:.12s linear background-color;
+}
+
+.container {
+    padding: 5rem;
+
+    & >* {
+        margin: auto;
+    }
+
+    & > *:not(.cards){
+        text-wrap: balance;
+        width:clamp(5rem,120rem,90%);
+    }
+
+
+    & > .title {
+        @include font(12rem,900,1.2,null,null,start,$fontAnton);
+    }
+
+    & > .content, & > .excerpt {
+        @include font(1.95rem,500,2.2,null,-.12px,start);
+        padding: 0.45rem;
+    }
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem;
+    margin: 3rem auto;
+    width:clamp(5rem,135rem,95%);
+}
+
+.card {
+    background: darkred;
+    & > .image {
+        aspect-ratio: 16/9;
+        width: 100%;
+        position: relative;
+    }
+    & > .title {
+        @include font(3.1rem,500,1,null,-.4px,start);
+        background: violet;
+        padding: .5rem;
+    }
 }

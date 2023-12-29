@@ -52,9 +52,11 @@ export default function Services(props:tServices){
                                     />
                                 </figure>
                                 <h3 className={css.title}>{item.title}</h3>
-                                <Link className={css.button} href={item.uri}>
-                                    {item.button}
-                                </Link>
+                                <div className={css.button__wrapper}>
+                                    <Link className={css.button} href={item.uri}>
+                                        {item.button}
+                                    </Link>
+                                </div>
                             </li>
                         )
                     })}

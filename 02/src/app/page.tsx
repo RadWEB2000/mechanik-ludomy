@@ -79,6 +79,16 @@ export default function HomePage() {
                                 sourceUrl:img,
                                 title:""
                             },
+                            title:"Doradztwo",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
                             title:"Wymiana zawieszenia",
                             uri:"#"
                         },

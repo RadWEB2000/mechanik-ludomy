@@ -120,3 +120,43 @@
     visibility: hidden;
   }
 }
+
+@mixin animation($name,$direction:null,$iteration:null,$duration:null,$playState:null,$rangeStart:null,$rangeEnd:null,$timing:null,$timeline:null,$composition:null,){
+    animation-name: $name;
+    @if $composition != null {
+      animation-composition: $composition;
+    }
+
+    @if $direction != null {
+     animation-direction: $direction;
+    }
+
+    @if $duration != null {
+      animation-duration: $duration;
+    }
+    @if $iteration != null {
+      animation-iteration-count: $iteration;
+    }
+
+    @if $playState != null {
+      animation-play-state: $playState;
+    }
+
+    @if $rangeStart != null {
+      animation-range-start: $rangeStart;
+    }
+
+    @if $rangeEnd != null {
+      animation-range-start: $rangeEnd;
+    }
+
+    @if $timeline != null {
+      animation-timeline: $timeline;
+    }
+
+    @if $timing != null {
+      animation-timing-function: $timing;
+    }
+
+
+  }
