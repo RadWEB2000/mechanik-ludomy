@@ -5,7 +5,10 @@ const nextConfig = {
         remotePatterns:[
             {
                 hostname:"img.freepik.com",
-            }
+            },
+            {
+                hostname:"images.unsplash.com",
+            },
         ]
     }
 }

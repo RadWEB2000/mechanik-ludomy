@@ -9,24 +9,23 @@
         background-color: hsl(9, 100%, 52%,0%);
     }
    
-    40%, 95% {
-        background-color: hsl(9, 100%, 52%);
+    20%, 95% {
+        background-color: hsl(9, 87%, 45%);
     }
 }
 
 .wrapper {
-    animation: animatedBackground 4s ease-in-out forwards;
+    animation: animatedBackground 4s ease-in-out ;
     animation-range-start: cover 0%;
     animation-range-end: cover 120%;
     animation-timeline: view(y);
-    padding: 3rem 5rem;
+    padding: 12rem 1rem;
     margin: 5rem 0rem;
     transition:.12s linear background-color;
 }
 
 .container {
-    padding: 5rem;
-
+    padding: .2rem;
     & >* {
         margin: auto;
     }
@@ -38,34 +37,138 @@
 
 
     & > .title {
-        @include font(12rem,900,1.2,null,null,start,$fontAnton);
+        @include font(6.15rem,900,1.2,null,null,start,$fontAnton);
     }
 
     & > .content, & > .excerpt {
-        @include font(1.95rem,500,2.2,null,-.12px,start);
+        @include font(1.75rem,500,1.92,null,-.12px,start);
         padding: 0.45rem;
+        margin: 1rem auto;
     }
 
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:2rem;
+    @include flex(center,center,row wrap,1.5rem,1.5rem);
+    gap:1rem;
     margin: 3rem auto;
-    width:clamp(5rem,135rem,95%);
 }
 
 .card {
-    background: darkred;
-    & > .image {
-        aspect-ratio: 16/9;
-        width: 100%;
-        position: relative;
+    @include backgroundCover();
+    @include flex(flex-start,flex-start,column,null,1rem);
+    @include size(auto, 100%);
+    padding: 4rem 1rem;
+    transition:.12s linear background-color;
+    background-color: #00000082;
+    background-blend-mode: color;
+
+    &:hover {
+        background-color: black !important;
     }
+
+
     & > .title {
-        @include font(3.1rem,500,1,null,-.4px,start);
-        background: violet;
-        padding: .5rem;
+        @include font(3.3rem,600,null,null,null,start,$fontBlackOps);
+        align-items: center;
+        justify-content: flex-start;
+        padding:.6rem 1rem;
+        grid-area: title;
+    }
+
+    & > .button__wrapper {
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding:0rem 2rem;
+        grid-area: button;
+        & > .button {
+            @include font(2.1rem,700);
+            border-radius: .7dvw;
+            background: hsl(0, 0%, 100%);
+            color: #000;
+            display: flex;
+            padding: .65rem 2rem;
+        }
+    }
+
+
+    & > .content {
+        @include font(1.7rem,400,null,null,null,start);
+        align-items: center;
+        justify-content: center;
+        padding: .6rem;
+        text-wrap: balance;
+        grid-area: content_box;
+    }
+}
+
+@media only screen {
+    @media (min-width:585px){
+        .wrapper {
+            padding: 12rem 1rem;
+        }
+
+        .container {
+            & > .title {
+                font-size: 9rem;
+            }
+            & > .content, & > .excerpt {
+                font-size: 1.9rem;
+            }
+        }
+
+        .card {
+            @include size(minmax(35rem,auto), 45rem);
+            padding:2rem;
+            & > .title {
+                font-size: 4.4rem;
+            }
+
+            & > .button__wrapper {
+                & > .button {
+                    font-size: 2.2rem;
+                }
+            }
+            & > .content {
+                font-size: 1.72rem;
+            }
+        }
+    }
+    @media (min-width:800px){
+        .wrapper {
+            padding: 12rem 1rem;
+        }
+
+        .container {
+            & > .title {
+                font-size: 9rem;
+            }
+            & > .content, & > .excerpt {
+                font-size: 1.9rem;
+            }
+        }
+
+        .card {
+            @include size( 45rem, 45rem);
+            padding:4rem 2rem;
+            & > .title {
+                font-size: 4.4rem;
+            }
+
+            & > .button__wrapper {
+                & > .button {
+                    font-size: 2.2rem;
+                }
+            }
+            & > .content {
+                font-size: 1.82rem;
+            }
+        }
+    }
+    @media (min-width:1300px){
+        .wrapper {
+            margin: 11rem 0rem;
+            padding: 16rem 1rem;
+        }
     }
 }

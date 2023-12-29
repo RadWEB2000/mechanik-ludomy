@@ -3,7 +3,7 @@ import { FaCar,FaHandsHelping } from "react-icons/fa";
 import mechanicImage from "assets/graphics/patryk-profile-image.jpg";
 
 export default function HomePage() {
-    const img = "https://img.freepik.com/free-photo/young-woman-enjoying-road-trip_23-2148732164.jpg?w=740&t=st=1703841854~exp=1703842454~hmac=5ea14e4f63649578ca743690b69047eaa120add5b4f689eefa43abe36b809670";
+    const img = "https://img.freepik.com/premium-photo/colorful-poster-car-with-word-fast-it_447899-8737.jpg?w=740";
     return (
         <div>
             <Hero

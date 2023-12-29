@@ -1,22 +1,46 @@
 import { ReadMoreButton } from "utils/Buttons";
-import Link from "next/link";
+// import Link from "next/link";
 import { tImage } from "ts/types";
-import Image from "next/image";
+// import Image from "next/image";
 import css from "views/HomePage/Services/Services.module.scss";
+import Link from "next/link";
+
 
 type tServices = {
     button:string;
     content:string;
     excerpt:string;
-    items:{
-        button:string;
-        image:tImage;
-        title:string;
-        uri:string;
-    }[];
+    items:tCard[];
     uri:string;
     title:string;
 }
+
+type tCard = {
+    button:string;
+    image:tImage;
+    title:string;
+    uri:string;
+}
+
+function Card(props:tCard) {
+    return(
+        <li className={css.card}
+            style={{
+                backgroundImage:`url('${props.image.sourceUrl}')`
+            }}
+        >
+            <h3 className={css.title}>{props.title}</h3>
+            <p className={css.content}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum quisquam optio possimus reprehendeg elit. Nostrum quisquam optio possimus reprehende
+            </p>
+            <div className={css.button__wrapper}>
+                <Link className={css.button} href={props.uri}>
+                    {props.button}
+                </Link>
+            </div>
+        </li>
+    )
+}
+
 
 export default function Services(props:tServices){
     return(
@@ -34,31 +58,10 @@ export default function Services(props:tServices){
                 />
                 <ul className={css.cards}>
                     {props.items.map((item,index) => {
-                        return(
-                            <li className={css.card} key={index}>
-                                <figure className={css.image}>
-                                     <Image
-                                        alt={item.image.altText}
-                                        blurDataURL=""
-                                        fill
-                                        loading="lazy"
-                                        src={item.image.sourceUrl}
-                                        style={{
-                                            objectFit:"cover",
-                                            objectPosition:"center"
-                                        }}
-                                        title={item.image.altText}
-                                        quality={75}
-                                    />
-                                </figure>
-                                <h3 className={css.title}>{item.title}</h3>
-                                <div className={css.button__wrapper}>
-                                    <Link className={css.button} href={item.uri}>
-                                        {item.button}
-                                    </Link>
-                                </div>
-                            </li>
-                        )
+                        return <Card
+                            {...item}
+                            key={index}
+                        />
                     })}
                 </ul>
                 <p className={css.content} dangerouslySetInnerHTML={{__html:props.content}} />

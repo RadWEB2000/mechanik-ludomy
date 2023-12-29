@@ -1,3 +1,15 @@
+@import "./Variables.scss";
 .box {
+    background: hsl(128, 71%, 48%);
     viewport-fit: contain;
+    height: 65rem;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    li {
+        background: aqua !important;
+    }
 }
