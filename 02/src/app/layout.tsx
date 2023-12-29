@@ -11,6 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
+            <head>
+                <meta name="robots" content="noindex nofollow" />
+            </head>
             <body>{children}</body>
         </html>
     );

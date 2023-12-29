@@ -2,6 +2,7 @@ import { ReadMoreButton } from "utils/Buttons";
 import Link from "next/link";
 import { tImage } from "ts/types";
 import Image from "next/image";
+import css from "views/HomePage/Services/Services.module.scss";
 
 type tServices = {
     button:string;
@@ -20,24 +21,22 @@ type tServices = {
 export default function Services(props:tServices){
     return(
         <div
-            style={{
-                backgroundColor:"red"
-            }}
+            className={css.wrapper}
         >
-            <div>
-                <h2>{props.title}</h2>
-                <p dangerouslySetInnerHTML={{__html:props.excerpt}} />
+            <div className={css.container}>
+                <h2 className={css.title}>{props.title}</h2>
+                <p className={css.excerpt} dangerouslySetInnerHTML={{__html:props.excerpt}} />
                 <ReadMoreButton
                     iconify
                     label={props.button}
                     theme="secondary"
                     uri={props.uri}
                 />
-                <ul>
+                <ul className={css.cards}>
                     {props.items.map((item,index) => {
                         return(
-                            <li key={index}>
-                                <figure>
+                            <li className={css.card} key={index}>
+                                <figure className={css.image}>
                                      <Image
                                         alt={item.image.altText}
                                         blurDataURL=""
@@ -52,15 +51,15 @@ export default function Services(props:tServices){
                                         quality={75}
                                     />
                                 </figure>
-                                <h3>{item.title}</h3>
-                                <Link href={item.uri}>
+                                <h3 className={css.title}>{item.title}</h3>
+                                <Link className={css.button} href={item.uri}>
                                     {item.button}
                                 </Link>
                             </li>
                         )
                     })}
                 </ul>
-                <p dangerouslySetInnerHTML={{__html:props.content}} />
+                <p className={css.content} dangerouslySetInnerHTML={{__html:props.content}} />
             </div>
         </div>    
     )

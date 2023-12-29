@@ -3,6 +3,7 @@ import { FaCar,FaHandsHelping } from "react-icons/fa";
 import mechanicImage from "assets/graphics/patryk-profile-image.jpg";
 
 export default function HomePage() {
+    const img = "https://img.freepik.com/free-photo/young-woman-enjoying-road-trip_23-2148732164.jpg?w=740&t=st=1703841854~exp=1703842454~hmac=5ea14e4f63649578ca743690b69047eaa120add5b4f689eefa43abe36b809670";
     return (
         <div>
             <Hero
@@ -60,7 +61,99 @@ export default function HomePage() {
                     excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, modi, quaerat, cupiditate magni illo commodi quis deleniti quas quasi similique sint necessitatibus dolorum facere vel quae nam accusantium itaque debitis!
                     Vero molestiae repudiandae veniam illo ipsum dolorem eius reiciendis velit exercitationem ex, non, sequi veritatis nemo nam amet earum voluptates rerum. Deleniti cumque ea incidunt dolores voluptatem in odit odio?
                     Quam vero aperiam labore "
-                    items={[]}
+                    items={[
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Naprawa aut",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Wymiana zawieszenia",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Wymiana rozrządu",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Wymiana układu hamulcowego",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Wymiana oleju",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Wymiana klocków hamulcowych",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Naprawa zawieszeń",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Naprawa silników",
+                            uri:"#"
+                        },
+                        {
+                            button:"więcej",
+                            image:{
+                                altText:"",
+                                sourceUrl:img,
+                                title:""
+                            },
+                            title:"Diagnostyka komputerowa",
+                            uri:"#"
+                        },
+
+                    ]}
                     title="Usługi mechanika w Ludomach"
                     uri="#"
                 />
