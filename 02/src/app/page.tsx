@@ -1,9 +1,10 @@
-import { About, Blog, Hero, Services, ServicesOverview } from "views/HomePage"
-import { FaCar,FaHandsHelping } from "react-icons/fa";
-import mechanicImage from "assets/graphics/patryk-profile-image.jpg";
+import { About, Blog, Hero, Services, ServicesOverview } from 'views/HomePage';
+import { FaCar, FaHandsHelping } from 'react-icons/fa';
+import mechanicImage from 'assets/graphics/patryk-profile-image.jpg';
 
 export default function HomePage() {
-    const img = "https://img.freepik.com/premium-photo/colorful-poster-car-with-word-fast-it_447899-8737.jpg?w=740";
+    const img =
+        'https://img.freepik.com/premium-photo/colorful-poster-car-with-word-fast-it_447899-8737.jpg?w=740';
     return (
         <div>
             <Hero
@@ -12,16 +13,16 @@ export default function HomePage() {
                 video="/assets/movies/background.mp4"
                 buttons={[
                     {
-                        label:"Blog",
-                        uri:"#"
+                        label: 'Blog',
+                        uri: '#',
                     },
                     {
-                        label:"Usługi",
-                        uri:"#"
+                        label: 'Usługi',
+                        uri: '#',
                     },
                     {
-                        label:"Kontakt",
-                        uri:"#"
+                        label: 'Kontakt',
+                        uri: '#',
                     },
                 ]}
             />
@@ -30,16 +31,18 @@ export default function HomePage() {
                     button="Więcej"
                     items={[
                         {
-                            content:"Optio excepturi cum temporibus nostrum mollitia sint non. Non quas dol",
-                            icon:<FaCar />,
-                            title:"Naprawa aut",
-                            uri:"#"
+                            content:
+                                'Optio excepturi cum temporibus nostrum mollitia sint non. Non quas dol',
+                            icon: <FaCar />,
+                            title: 'Naprawa aut',
+                            uri: '#',
                         },
                         {
-                            content:"Optio excepturi cum temporibus nostrum mollitia sint non. Non quas dol",
-                            icon:<FaHandsHelping />,
-                            title:"Doradztwo",
-                            uri:"#"
+                            content:
+                                'Optio excepturi cum temporibus nostrum mollitia sint non. Non quas dol',
+                            icon: <FaHandsHelping />,
+                            title: 'Doradztwo',
+                            uri: '#',
                         },
                     ]}
                 />
@@ -47,8 +50,8 @@ export default function HomePage() {
                     button="Dowiedz się więcej"
                     content={`Qui odio labore. Repudiandae qui delectus. Quaerat vel sapiente occaecati laborum esse rerum. Pariatur quo deleniti possimus distinctio et. Rerum autem hic sint maxime itaque eaque aut. Aliquid et assumenda. Reiciendis asperiores veritatis non porro deserunt harum nulla consequatur. Vero nam beatae impedit cumque non soluta. Quo in sint explicabo deui.`}
                     image={{
-                        altText:"",
-                        sourceUrl:mechanicImage.src
+                        altText: '',
+                        sourceUrl: mechanicImage.src,
                     }}
                     motto="Twoje auto, nasza pasja"
                     title="O firmie"
@@ -63,112 +66,231 @@ export default function HomePage() {
                     Quam vero aperiam labore "
                     items={[
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Naprawa aut",
-                            uri:"#"
+                            title: 'Naprawa aut',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Doradztwo",
-                            uri:"#"
+                            title: 'Doradztwo',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Wymiana zawieszenia",
-                            uri:"#"
+                            title: 'Wymiana zawieszenia',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Wymiana rozrządu",
-                            uri:"#"
+                            title: 'Wymiana rozrządu',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Wymiana układu hamulcowego",
-                            uri:"#"
+                            title: 'Wymiana układu hamulcowego',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Wymiana oleju",
-                            uri:"#"
+                            title: 'Wymiana oleju',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Wymiana klocków hamulcowych",
-                            uri:"#"
+                            title: 'Wymiana klocków hamulcowych',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Naprawa zawieszeń",
-                            uri:"#"
+                            title: 'Naprawa zawieszeń',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Naprawa silników",
-                            uri:"#"
+                            title: 'Naprawa silników',
+                            uri: '#',
                         },
                         {
-                            button:"więcej",
-                            image:{
-                                altText:"",
-                                sourceUrl:img,
-                                title:""
+                            button: 'więcej',
+                            image: {
+                                altText: '',
+                                sourceUrl: img,
+                                title: '',
                             },
-                            title:"Diagnostyka komputerowa",
-                            uri:"#"
+                            title: 'Diagnostyka komputerowa',
+                            uri: '#',
                         },
-
                     ]}
                     title="Usługi mechanika w Ludomach"
                     uri="#"
                 />
-                <Blog/>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ullam possimus? Ea qui quibusdam labore culpa iusto nemo temporibus modi nihil dolorum amet aut neque doloremque nobis eius dolore, quidem a quaerat fuga cumque sit velit nam impedit at quasi? Ullam sed iste ad praesentium rem exercitationem quo quisquam corporis dolores quod. Corporis veniam magnam accusamus quos vel? Beatae qui rem eveniet eum tenetur dolor! Voluptatibus amet sint perferendis deleniti esse fugit autem, earum culpa nihil illo unde sunt natus sapiente vitae consectetur placeat, voluptate saepe odit nesciunt fuga magnam ullam? In eaque beatae aperiam animi est, obcaecati nisi necessitatibus sequi enim impedit voluptate tenetur earum eveniet sunt eos laboriosam velit vero dolore modi fuga eligendi totam? Earum, culpa velit.
+                <Blog
+                    button="Wszystkie wpisy"
+                    cards={[
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                        {
+                            button: 'czytaj',
+                            excerpt:
+                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
+                            image: {
+                                altText: '',
+                                sourceUrl:
+                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
+                                title: '',
+                            },
+                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
+                            uri: '#',
+                        },
+                    ]}
+                    content={`Numquam consequatur est mollitia. Neque quasi accusantium voluptatum ipsam. Ab saepe cupiditate aperiam voluptas accusantium ipsam quis nemo. Vel voluptate sed molestiae voluptatem voluptatum. iure. Vero distinctio eius in. A aperiam dolorem quis nesciunt. Adipisci quibusdam quae quidem quasi officiis. Dolores voluptates soluta. Est deleniti error quis inventore eveniet. Consequuntur animi aperiam voluptate quis perferendis vero est.`}
+                    title="Blog"
+                    uri="#"
+                />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ullam
+                possimus? Ea qui quibusdam labore culpa iusto nemo temporibus modi nihil dolorum
+                amet aut neque doloremque nobis eius dolore, quidem a quaerat fuga cumque sit velit
+                nam impedit at quasi? Ullam sed iste ad praesentium rem exercitationem quo quisquam
+                corporis dolores quod. Corporis veniam magnam accusamus quos vel? Beatae qui rem
+                eveniet eum tenetur dolor! Voluptatibus amet sint perferendis deleniti esse fugit
+                autem, earum culpa nihil illo unde sunt natus sapiente vitae consectetur placeat,
+                voluptate saepe odit nesciunt fuga magnam ullam? In eaque beatae aperiam animi est,
+                obcaecati nisi necessitatibus sequi enim impedit voluptate tenetur earum eveniet
+                sunt eos laboriosam velit vero dolore modi fuga eligendi totam? Earum, culpa velit.
             </main>
         </div>
     );

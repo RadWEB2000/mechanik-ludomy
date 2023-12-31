@@ -1,43 +1,46 @@
-@import "../../../../styles/Mixins.scss";
-@import "../../../../styles/Variables.scss";
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
 
 .wrapper {
-    // background: lime;
-    margin:5rem 0;
+    margin: 5rem 0;
 }
 
 .container {
-    @include flex(flex-start,flex-start,column,null,2rem,true);
-    // background: darkgray;
-    margin: 0 auto 0 4rem ;
+    @include flex(flex-start, flex-start, column, null, 2rem, true);
+    margin: 0 auto 0 2rem;
     padding: 0.45rem;
-    width:clamp(5rem,125rem,95%);
+    width: clamp(5rem, 125rem, 95%);
 }
 
-
 .title {
-    @include font(19rem,900,null,null,null,start,$fontAnton);
+    @include font(12rem, 900, null, null, null, start, $fontAnton);
 }
 
 .content {
-    @include font(2rem,500,2.2,null,null,start,null);
-    text-wrap:pretty;
+    @include font(1.74rem, 500, 2.2, null, null, start, null);
+    text-wrap: pretty;
     width: 95%;
 }
 
 .cards__wrapper {
-    // background: purple;
-    height: 55rem;
     margin-top: 5rem;
-    padding: 1.4rem;
+    padding: 1.4rem 1rem;
 }
 
 .cards {
-    @include size(100%,100%);
-    @include flex(flex-start,flex-start, row nowrap,.7rem,null,true);
-    overflow-x: scroll;
-    // background: pink;
-    &::-webkit-scrollbar{
-        height: 0;
+    @include flex(center, center, row wrap, 1rem, 1rem, true);
+}
+
+@media only screen {
+    @media (min-width: 900px) {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (min-width: 1100px) {
+        .cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 }

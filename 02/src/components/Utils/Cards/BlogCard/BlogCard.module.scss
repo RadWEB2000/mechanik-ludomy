@@ -1,34 +1,46 @@
-@import "../../../../styles/Mixins.scss";
-@import "../../../../styles/Variables.scss";
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
 
 .recommended__wrapper {
     display: grid;
     grid-template-rows: calc(100% - 25rem) 25rem;
     height: 100%;
-    width: 40rem;
+    width: 30rem;
     & > figure {
+        aspect-ratio: 4/3;
+        width: 100%;
         border-radius: 1.2rem;
         overflow: hidden;
         position: relative;
     }
     & > div {
-        @include flex(flex-start,flex-start,column,null,1rem);
-        padding: 1rem;
+        @include flex(flex-start, flex-start, column, null, 1rem);
+        padding: 1rem 1.5rem;
         & > h4 {
-            @include font(3rem,600,1.1,null,null,start);
+            @include font(2.3rem, 600, 1.1, null, null, start);
         }
         & > p {
             color: #ddd;
+            font-size: 1.55rem;
         }
         & > a {
-            @include font(1.7rem,800,1,null,null,center);
+            @include font(1.75rem, 800, 1, null, null, center);
             display: flex;
             position: relative;
-            transition: .12s linear color;
+            transition: 0.12s linear color;
             &:focus-within,
             &:hover {
                 color: orangered;
             }
+        }
+    }
+}
+
+@media only screen {
+    @media (min-width: 900px) {
+        .recommended__wrapper {
+            margin: auto;
+            width: clamp(27rem, 47rem, 99%);
         }
     }
 }

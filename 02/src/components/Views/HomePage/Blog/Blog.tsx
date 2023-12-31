@@ -1,88 +1,74 @@
-import { ReadMoreButton } from "app/components/Utils/Buttons";
-import { BlogCard } from "utils/Cards";
-import css from "views/HomePage/Blog/Blog.module.scss";
+'use client';
+import { motion } from 'framer-motion';
+import { ReadMoreButton } from 'app/components/Utils/Buttons';
+import { BlogCard } from 'utils/Cards';
+import css from 'views/HomePage/Blog/Blog.module.scss';
+import { tImage } from 'ts/types';
+import { useEffect, useState } from 'react';
 
-export default function Blog(){
-    return(
+type tBlog = {
+    title: string;
+    content: string;
+    button: string;
+    uri: string;
+    cards: {
+        title: string;
+        uri: string;
+        image: tImage;
+        button: string;
+        excerpt: string;
+    }[];
+};
+
+export default function Blog(props: tBlog) {
+    const [getDeviceSize, setDeviceSize] = useState<number>(2);
+
+    useEffect(() => {
+        if (window !== undefined) {
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1100) {
+                    setDeviceSize(4);
+                } else if (window.innerWidth >= 900) {
+                    setDeviceSize(3);
+                } else {
+                    setDeviceSize(2);
+                }
+            });
+
+            if (window.innerWidth >= 1100) {
+                setDeviceSize(4);
+            } else if (window.innerWidth >= 900) {
+                setDeviceSize(3);
+            } else {
+                setDeviceSize(2);
+            }
+        }
+    }, []);
+
+    return (
         <div className={css.wrapper}>
             <section className={css.container}>
-                <h2 className={css.title}>Blog</h2>
-                <p className={css.content}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quod fugit error nisi reprehenderit officiis vitae fuga? Incidunt et laborum in quis qui minus facilis sapiente fugiat necessitatibus reprehenderit dignissimos mollitia nostrum expedita maiores ipsam ab similique, quas cum, iure quisquam ducimus quibusdam perferendis.</p>
-                <ReadMoreButton
-                    iconify
-                    label="Wszystkie wpisy"
-                    theme="primary"
-                    uri="#"
-                />
+                <h2 className={css.title}>{props.title}</h2>
+                <p className={css.content} dangerouslySetInnerHTML={{ __html: props.content }} />
+                <ReadMoreButton iconify label={props.button} theme="primary" uri={props.uri} />
             </section>
-            <div className={css.cards__wrapper}>
-                <ul className={css.cards}>
-                    <BlogCard
-                        title="Internal Usability Strategist"
-                        button="czytaj"
-                        image={{
-                            altText:"",
-                            sourceUrl:"https://img.freepik.com/free-photo/silver-sedan-with-red-lights-parked-port_114579-4385.jpg?w=1060&t=st=1703875597~exp=1703876197~hmac=18897ecea0e6a8fedb95f7d96504c05c82704f3b2ebcbf81f6b856a5b48ba0bb",
-                            title:""
-                        }}
-                        uri="#"
-                        excerpt={`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa excepturi ab eius aut placeat odit, quasi quibusdam velit atque pariatur sit, asperiores doloremque nemo maxime temporibus odio rerum, aliquam quam molestias! Et illum nisi ea harum quod ipsum dolore fugit, quibusdam, nemo similique esse ab! Autem assumenda vel tempora? Corrupti, voluptatem?`}
-                        theme="regural"
-                    />               
-                    <BlogCard
-                        title="Internal Usability Strategist"
-                        button="czytaj"
-                        image={{
-                            altText:"",
-                            sourceUrl:"https://img.freepik.com/free-photo/silver-sedan-with-red-lights-parked-port_114579-4385.jpg?w=1060&t=st=1703875597~exp=1703876197~hmac=18897ecea0e6a8fedb95f7d96504c05c82704f3b2ebcbf81f6b856a5b48ba0bb",
-                            title:""
-                        }}
-                        uri="#"
-                        excerpt={`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa excepturi ab eius aut placeat odit, quasi quibusdam velit atque pariatur sit, asperiores doloremque nemo maxime temporibus odio rerum, aliquam quam molestias! Et illum nisi ea harum quod ipsum dolore fugit, quibusdam, nemo similique esse ab! Autem assumenda vel tempora? Corrupti, voluptatem?`}
-                        theme="regural"
-                    />               
-                    <BlogCard
-                        title="Internal Usability Strategist"
-                        button="czytaj"
-                    
-                        image={{
-                            altText:"",
-                            sourceUrl:"https://img.freepik.com/free-photo/silver-sedan-with-red-lights-parked-port_114579-4385.jpg?w=1060&t=st=1703875597~exp=1703876197~hmac=18897ecea0e6a8fedb95f7d96504c05c82704f3b2ebcbf81f6b856a5b48ba0bb",
-                            title:""
-                        }}
-                        uri="#"
-                        excerpt={`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa excepturi ab eius aut placeat odit, quasi quibusdam velit atque pariatur sit, asperiores doloremque nemo maxime temporibus odio rerum, aliquam quam molestias! Et illum nisi ea harum quod ipsum dolore fugit, quibusdam, nemo similique esse ab! Autem assumenda vel tempora? Corrupti, voluptatem?`}
-                        theme="regural"
-                    />               
-                    <BlogCard
-                        title="Internal Usability Strategist"
-                        button="czytaj"
-                    
-                        image={{
-                            altText:"",
-                            sourceUrl:"https://img.freepik.com/free-photo/silver-sedan-with-red-lights-parked-port_114579-4385.jpg?w=1060&t=st=1703875597~exp=1703876197~hmac=18897ecea0e6a8fedb95f7d96504c05c82704f3b2ebcbf81f6b856a5b48ba0bb",
-                            title:""
-                        }}
-                        uri="#"
-                        excerpt={`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa excepturi ab eius aut placeat odit, quasi quibusdam velit atque pariatur sit, asperiores doloremque nemo maxime temporibus odio rerum, aliquam quam molestias! Et illum nisi ea harum quod ipsum dolore fugit, quibusdam, nemo similique esse ab! Autem assumenda vel tempora? Corrupti, voluptatem?`}
-                        theme="regural"
-                    />               
-                    <BlogCard
-                        title="Internal Usability Strategist"
-                        button="czytaj"
-                    
-                        image={{
-                            altText:"",
-                            sourceUrl:"https://img.freepik.com/free-photo/silver-sedan-with-red-lights-parked-port_114579-4385.jpg?w=1060&t=st=1703875597~exp=1703876197~hmac=18897ecea0e6a8fedb95f7d96504c05c82704f3b2ebcbf81f6b856a5b48ba0bb",
-                            title:""
-                        }}
-                        uri="#"
-                        excerpt={`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa excepturi ab eius aut placeat odit, quasi quibusdam velit atque pariatur sit, asperiores doloremque nemo maxime temporibus odio rerum, aliquam quam molestias! Et illum nisi ea harum quod ipsum dolore fugit, quibusdam, nemo similique esse ab! Autem assumenda vel tempora? Corrupti, voluptatem?`}
-                        theme="regural"
-                    />   
-                </ul>
-            </div>            
+            <motion.div className={css.cards__wrapper}>
+                <motion.ul className={css.cards}>
+                    {props.cards.slice(0, getDeviceSize).map((item, index) => {
+                        return (
+                            <BlogCard
+                                title={item.title}
+                                button={item.button}
+                                key={index}
+                                image={item.image}
+                                uri={item.uri}
+                                excerpt={item.excerpt}
+                                theme="regural"
+                            />
+                        );
+                    })}
+                </motion.ul>
+            </motion.div>
         </div>
-    )
+    );
 }
-
