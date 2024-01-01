@@ -1,0 +1,27 @@
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
+
+.wrapper {
+    // background: lime;
+    width: 100%;
+    height: 15rem;
+    overflow-x: scroll;
+}
+
+.cards {
+    @include flex(center, flex-start, row nowrap, 2rem);
+    // background: purple;
+    width: max-content;
+}
+
+.card {
+    // background: aqua;
+    position: relative;
+    @include size(12rem, 12rem);
+    filter: grayscale(100%) invert(0);
+    transition: 0.2s linear filter;
+
+    &:hover {
+        filter: grayscale(0%) invert(0);
+    }
+}

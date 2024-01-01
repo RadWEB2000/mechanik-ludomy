@@ -1,6 +1,7 @@
-import { About, Blog, Hero, Services, ServicesOverview } from 'views/HomePage';
+import { About, AutomotiveBrands, Blog, Hero, Services, ServicesOverview } from 'views/HomePage';
 import { FaCar, FaHandsHelping } from 'react-icons/fa';
 import mechanicImage from 'assets/graphics/patryk-profile-image.jpg';
+import { automotiveBrands } from 'data/automotiveBrands';
 
 export default function HomePage() {
     const img =
@@ -281,6 +282,7 @@ export default function HomePage() {
                     title="Blog"
                     uri="#"
                 />
+                <AutomotiveBrands cards={automotiveBrands} />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ullam
                 possimus? Ea qui quibusdam labore culpa iusto nemo temporibus modi nihil dolorum
                 amet aut neque doloremque nobis eius dolore, quidem a quaerat fuga cumque sit velit
