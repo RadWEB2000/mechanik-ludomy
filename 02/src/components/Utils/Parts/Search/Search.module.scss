@@ -1,0 +1,40 @@
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
+
+.wrapper {
+    // background: purple;
+    @include size(auto,clamp(10rem,85rem,90%));
+    margin:1rem auto 3rem;
+    & > form {
+        @include flex(flex-start,flex-start,column,null,.23rem);
+        & > label {
+            @include font(1.7rem,500,null,null,null,start);
+            padding: 0.4rem 1rem;
+            width: 100%;
+        }
+        & > div {
+            @include flex(center,flex-end,row nowrap,null,null,true);
+            @include size(5rem,100%);
+            background-color: #171717;
+            border-radius: .2rem;
+            position: relative;
+            transition: .12s linear background-color;
+            &:focus-within,
+            &:hover {
+                background-color: #222;
+            }
+            
+            & > input {
+                @include size(100%,100%);
+                color: #fff;
+                padding: 0rem 4rem 0rem 1.5rem;
+            }
+            & > i {
+                @include flex(center,center);
+                @include size(3.5rem,3.5rem);
+                position: absolute;
+                z-index: 1;
+            }
+        }
+    }
+}

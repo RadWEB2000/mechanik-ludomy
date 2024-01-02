@@ -24,11 +24,12 @@
 
 .cards__wrapper {
     margin-top: 5rem;
-    padding: 1.4rem 1rem;
+    padding: .4rem 1rem;
 }
 
 .cards {
-    @include flex(center, center, row wrap, 1rem, 1rem, true);
+    @include flex(baseline, center, row wrap, 1rem, 1rem, true);
+
 }
 
 @media only screen {

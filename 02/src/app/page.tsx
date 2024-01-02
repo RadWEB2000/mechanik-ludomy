@@ -2,6 +2,7 @@ import { About, AutomotiveBrands, Blog, Hero, Services, ServicesOverview } from 
 import { FaCar, FaHandsHelping } from 'react-icons/fa';
 import mechanicImage from 'assets/graphics/patryk-profile-image.jpg';
 import { automotiveBrands } from 'data/automotiveBrands';
+import { articles } from 'data/articles';
 
 export default function HomePage() {
     const img =
@@ -172,112 +173,7 @@ export default function HomePage() {
                 />
                 <Blog
                     button="Wszystkie wpisy"
-                    cards={[
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                        {
-                            button: 'czytaj',
-                            excerpt:
-                                'Porro assumenda sed cum cumque. Dolor id sed. Provident dolorum in excepturi iure alias vero recusandae voluptas.',
-                            image: {
-                                altText: '',
-                                sourceUrl:
-                                    'https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1800&t=st=1704025266~exp=1704025866~hmac=a92ad0c36dc94a3d4b75358ddcd267e3554512dc34c29eb40fa5c0f89a89793d',
-                                title: '',
-                            },
-                            title: 'Świece zapłonowe – wszystko co warto o nich wiedzieć',
-                            uri: '#',
-                        },
-                    ]}
+                    cards={articles}
                     content={`Numquam consequatur est mollitia. Neque quasi accusantium voluptatum ipsam. Ab saepe cupiditate aperiam voluptas accusantium ipsam quis nemo. Vel voluptate sed molestiae voluptatem voluptatum. iure. Vero distinctio eius in. A aperiam dolorem quis nesciunt. Adipisci quibusdam quae quidem quasi officiis. Dolores voluptates soluta. Est deleniti error quis inventore eveniet. Consequuntur animi aperiam voluptate quis perferendis vero est.`}
                     title="Blog"
                     uri="#"

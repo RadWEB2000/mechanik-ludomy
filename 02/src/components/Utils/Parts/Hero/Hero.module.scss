@@ -1,0 +1,21 @@
+@import '../../../../styles/Mixins.scss';
+@import '../../../../styles/Variables.scss';
+
+
+.wrapper {
+    @include backgroundCover;
+    @include size(clamp(15rem,95rem,auto),100%);
+}
+
+.container {
+    @include flex(center,center);
+    @include size(100%,100%);
+    background-image:linear-gradient(to bottom,rgba(255, 0, 0, 0.12),rgba(255, 0, 0, 0.32));
+    padding: 2rem 1rem;
+}
+
+
+.title {
+    @include font(5rem,900,1.1,null,null,center,$fontAlfa);
+    width: 95%;
+}
