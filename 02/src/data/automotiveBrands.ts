@@ -106,4 +106,634 @@ export const automotiveBrands: tAutomotiveBrands[] = [
         label: 'volkswagen',
         uri: '/marki/volkswagen',
     },
+    {
+        image: {
+            altText: '',
+            sourceUrl: audi.src,
+            title: '',
+        },
+        label: 'Audi',
+        uri: '/marki/audi',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: citroen.src,
+            title: '',
+        },
+        label: 'Citroen',
+        uri: '/marki/citroen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: fiat.src,
+            title: '',
+        },
+        label: 'Fiat',
+        uri: '/marki/fiat',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: hyundai.src,
+            title: '',
+        },
+        label: 'Hyundai',
+        uri: '/marki/hyundai',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: man.src,
+            title: '',
+        },
+        label: 'MAN',
+        uri: '/marki/man',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: mercedes.src,
+            title: '',
+        },
+        label: 'Mercedes',
+        uri: '/marki/mercedes',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: opel.src,
+            title: '',
+        },
+        label: 'Opel',
+        uri: '/marki/opel',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: skoda.src,
+            title: '',
+        },
+        label: 'Skoda',
+        uri: '/marki/skoda',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: tata.src,
+            title: '',
+        },
+        label: 'TATA',
+        uri: '/marki/tata',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: volkswagen.src,
+            title: '',
+        },
+        label: 'volkswagen',
+        uri: '/marki/volkswagen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: audi.src,
+            title: '',
+        },
+        label: 'Audi',
+        uri: '/marki/audi',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: citroen.src,
+            title: '',
+        },
+        label: 'Citroen',
+        uri: '/marki/citroen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: fiat.src,
+            title: '',
+        },
+        label: 'Fiat',
+        uri: '/marki/fiat',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: hyundai.src,
+            title: '',
+        },
+        label: 'Hyundai',
+        uri: '/marki/hyundai',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: man.src,
+            title: '',
+        },
+        label: 'MAN',
+        uri: '/marki/man',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: mercedes.src,
+            title: '',
+        },
+        label: 'Mercedes',
+        uri: '/marki/mercedes',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: opel.src,
+            title: '',
+        },
+        label: 'Opel',
+        uri: '/marki/opel',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: skoda.src,
+            title: '',
+        },
+        label: 'Skoda',
+        uri: '/marki/skoda',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: tata.src,
+            title: '',
+        },
+        label: 'TATA',
+        uri: '/marki/tata',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: volkswagen.src,
+            title: '',
+        },
+        label: 'volkswagen',
+        uri: '/marki/volkswagen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: audi.src,
+            title: '',
+        },
+        label: 'Audi',
+        uri: '/marki/audi',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: citroen.src,
+            title: '',
+        },
+        label: 'Citroen',
+        uri: '/marki/citroen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: fiat.src,
+            title: '',
+        },
+        label: 'Fiat',
+        uri: '/marki/fiat',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: hyundai.src,
+            title: '',
+        },
+        label: 'Hyundai',
+        uri: '/marki/hyundai',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: man.src,
+            title: '',
+        },
+        label: 'MAN',
+        uri: '/marki/man',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: mercedes.src,
+            title: '',
+        },
+        label: 'Mercedes',
+        uri: '/marki/mercedes',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: opel.src,
+            title: '',
+        },
+        label: 'Opel',
+        uri: '/marki/opel',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: skoda.src,
+            title: '',
+        },
+        label: 'Skoda',
+        uri: '/marki/skoda',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: tata.src,
+            title: '',
+        },
+        label: 'TATA',
+        uri: '/marki/tata',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: volkswagen.src,
+            title: '',
+        },
+        label: 'volkswagen',
+        uri: '/marki/volkswagen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: audi.src,
+            title: '',
+        },
+        label: 'Audi',
+        uri: '/marki/audi',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: citroen.src,
+            title: '',
+        },
+        label: 'Citroen',
+        uri: '/marki/citroen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: fiat.src,
+            title: '',
+        },
+        label: 'Fiat',
+        uri: '/marki/fiat',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: hyundai.src,
+            title: '',
+        },
+        label: 'Hyundai',
+        uri: '/marki/hyundai',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: man.src,
+            title: '',
+        },
+        label: 'MAN',
+        uri: '/marki/man',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: mercedes.src,
+            title: '',
+        },
+        label: 'Mercedes',
+        uri: '/marki/mercedes',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: opel.src,
+            title: '',
+        },
+        label: 'Opel',
+        uri: '/marki/opel',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: skoda.src,
+            title: '',
+        },
+        label: 'Skoda',
+        uri: '/marki/skoda',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: tata.src,
+            title: '',
+        },
+        label: 'TATA',
+        uri: '/marki/tata',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: volkswagen.src,
+            title: '',
+        },
+        label: 'volkswagen',
+        uri: '/marki/volkswagen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: audi.src,
+            title: '',
+        },
+        label: 'Audi',
+        uri: '/marki/audi',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: citroen.src,
+            title: '',
+        },
+        label: 'Citroen',
+        uri: '/marki/citroen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: fiat.src,
+            title: '',
+        },
+        label: 'Fiat',
+        uri: '/marki/fiat',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: hyundai.src,
+            title: '',
+        },
+        label: 'Hyundai',
+        uri: '/marki/hyundai',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: man.src,
+            title: '',
+        },
+        label: 'MAN',
+        uri: '/marki/man',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: mercedes.src,
+            title: '',
+        },
+        label: 'Mercedes',
+        uri: '/marki/mercedes',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: opel.src,
+            title: '',
+        },
+        label: 'Opel',
+        uri: '/marki/opel',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: skoda.src,
+            title: '',
+        },
+        label: 'Skoda',
+        uri: '/marki/skoda',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: tata.src,
+            title: '',
+        },
+        label: 'TATA',
+        uri: '/marki/tata',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: volkswagen.src,
+            title: '',
+        },
+        label: 'volkswagen',
+        uri: '/marki/volkswagen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: audi.src,
+            title: '',
+        },
+        label: 'Audi',
+        uri: '/marki/audi',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: citroen.src,
+            title: '',
+        },
+        label: 'Citroen',
+        uri: '/marki/citroen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: fiat.src,
+            title: '',
+        },
+        label: 'Fiat',
+        uri: '/marki/fiat',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: hyundai.src,
+            title: '',
+        },
+        label: 'Hyundai',
+        uri: '/marki/hyundai',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: man.src,
+            title: '',
+        },
+        label: 'MAN',
+        uri: '/marki/man',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: mercedes.src,
+            title: '',
+        },
+        label: 'Mercedes',
+        uri: '/marki/mercedes',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: opel.src,
+            title: '',
+        },
+        label: 'Opel',
+        uri: '/marki/opel',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: skoda.src,
+            title: '',
+        },
+        label: 'Skoda',
+        uri: '/marki/skoda',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: tata.src,
+            title: '',
+        },
+        label: 'TATA',
+        uri: '/marki/tata',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: volkswagen.src,
+            title: '',
+        },
+        label: 'volkswagen',
+        uri: '/marki/volkswagen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: audi.src,
+            title: '',
+        },
+        label: 'Audi',
+        uri: '/marki/audi',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: citroen.src,
+            title: '',
+        },
+        label: 'Citroen',
+        uri: '/marki/citroen',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: fiat.src,
+            title: '',
+        },
+        label: 'Fiat',
+        uri: '/marki/fiat',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: hyundai.src,
+            title: '',
+        },
+        label: 'Hyundai',
+        uri: '/marki/hyundai',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: man.src,
+            title: '',
+        },
+        label: 'MAN',
+        uri: '/marki/man',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: mercedes.src,
+            title: '',
+        },
+        label: 'Mercedes',
+        uri: '/marki/mercedes',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: opel.src,
+            title: '',
+        },
+        label: 'Opel',
+        uri: '/marki/opel',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: skoda.src,
+            title: '',
+        },
+        label: 'Skoda',
+        uri: '/marki/skoda',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: tata.src,
+            title: '',
+        },
+        label: 'TATA',
+        uri: '/marki/tata',
+    },
+    {
+        image: {
+            altText: '',
+            sourceUrl: volkswagen.src,
+            title: '',
+        },
+        label: 'volkswagen',
+        uri: '/marki/volkswagen',
+    },
 ];
