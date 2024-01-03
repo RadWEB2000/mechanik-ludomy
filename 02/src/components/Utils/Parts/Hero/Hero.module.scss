@@ -4,7 +4,7 @@
 
 .wrapper {
     @include backgroundCover;
-    @include size(42rem,100%);
+    @include size(32rem,100%);
 }
 
 .container {
@@ -16,6 +16,6 @@
 
 
 .title {
-    @include font(11rem,800,1.1,null,null,center,$fontAlfa);
+    @include font(5rem,800,1.1,null,null,center,$fontAlfa);
     width: 95%;
 }

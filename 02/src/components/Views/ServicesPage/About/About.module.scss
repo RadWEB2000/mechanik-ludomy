@@ -5,30 +5,37 @@
     display: grid;
     margin: 5rem 0rem 2rem;
     grid-template-columns: repeat(21,1fr);
+    & > * {
+        grid-column: 1/-1;
+    }
 }
 
 .box {
     @include flex(flex-start,flex-start,column,null,2rem);
-    grid-column: 1/11;
     padding: 1rem;
-
+    grid-row: 1;
     & > .title {
-        @include font(12rem,800,1,null,null,start,$fontAnton);
+        @include font(6.15rem,800,1,null,null,start,$fontAnton);
     }
 
     & > .content {
-        @include font(1.8rem,400,1.5,null,null,start,null);
+        @include font(1.55rem,400,1.5,null,-.8px,start,null);
         color: #ddd;
+        padding-right: 2rem;
         text-wrap: balance;
     }
 }
 
 .image__wrapper {
+    display: none;
     grid-column: 11/-1;
+    // background: red;
     padding: 1.2rem;
+    width: 100%;
     position: relative;
     & > .image {
         @include size(100%,100%);
         position: relative;
     }
 }
+
