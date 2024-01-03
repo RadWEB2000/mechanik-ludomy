@@ -1,0 +1,7 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(25,1fr);
+}

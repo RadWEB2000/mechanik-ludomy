@@ -20,7 +20,8 @@ export default function Search(props:tSearch){
     return(
         <div className={css.wrapper}>
             <form action="" onSubmit={(e) => e.preventDefault()}
-                   
+                      autoComplete={props.label}
+                        autoCorrect="off"
             >
                 <label htmlFor={props.name}>{props.label}</label>
                 <motion.div
@@ -41,13 +42,13 @@ export default function Search(props:tSearch){
                  
                 >
                     <input 
-                        autoComplete={props.label}
+                       autoComplete={props.label}
                         autoCorrect="off"
                         id={props.name} 
                         name={props.name} 
                         onChange={(e) => updateSearchValue(e.target.value)}
                         placeholder={props.placeholder} 
-                        type="text" 
+                        type="search" 
                     />
                     <i>
                         <FiSearch />

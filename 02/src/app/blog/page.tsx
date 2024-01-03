@@ -8,7 +8,7 @@ export default function HomePage() {
             <Hero
                 title="Blog"
             />
-            <main className="blog__container">
+            <main className="container blog__container">
                 <Search
                     label="Szukaj"
                     name="search"

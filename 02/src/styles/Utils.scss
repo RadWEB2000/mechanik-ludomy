@@ -1,9 +1,6 @@
 @import "./Variables.scss";
 
 .blog__container {
-    // background: pink;
-    margin:2rem auto 4rem;
-    width:clamp(5rem,125rem,95%);
     & > ul{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -21,4 +18,10 @@
             }
         }
     }
+}
+
+
+.container {
+    margin:2rem auto 4rem;
+    width:clamp(5rem,125rem,95%);
 }
