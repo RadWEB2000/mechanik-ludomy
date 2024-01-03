@@ -1,6 +1,7 @@
 import { tImage } from "ts/types";
 import Image from "next/image";
 import { ReadMoreButton } from "app/components/Utils/Buttons";
+import css from "views/ServicesPage/About/About.module.scss";
 
 type tAbout = {
     image:tImage;
@@ -12,10 +13,10 @@ type tAbout = {
 
 export default function About(props:tAbout){
     return(
-         <section>
-            <div>
-                <h2>{props.title}</h2>
-                <p>{props.content}</p>
+         <section className={css.wrapper}>
+            <div className={css.box}>
+                <h2 className={css.title}>{props.title}</h2>
+                <p className={css.content}>{props.content}</p>
                 <ReadMoreButton
                     iconify
                     label={props.button}
@@ -23,8 +24,8 @@ export default function About(props:tAbout){
                     uri={props.uri}
                 />
             </div>
-            <div>
-                <figure>
+            <div className={css.image__wrapper}>
+                <figure className={css.image}>
                     <Image
                         alt={props.image.altText}
                         fill

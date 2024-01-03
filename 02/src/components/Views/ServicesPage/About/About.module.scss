@@ -2,5 +2,33 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    background: gold;
+    display: grid;
+    margin: 5rem 0rem 2rem;
+    grid-template-columns: repeat(21,1fr);
+}
+
+.box {
+    @include flex(flex-start,flex-start,column,null,2rem);
+    grid-column: 1/11;
+    padding: 1rem;
+
+    & > .title {
+        @include font(12rem,800,1,null,null,start,$fontAnton);
+    }
+
+    & > .content {
+        @include font(1.8rem,400,1.5,null,null,start,null);
+        color: #ddd;
+        text-wrap: balance;
+    }
+}
+
+.image__wrapper {
+    grid-column: 11/-1;
+    padding: 1.2rem;
+    position: relative;
+    & > .image {
+        @include size(100%,100%);
+        position: relative;
+    }
 }
