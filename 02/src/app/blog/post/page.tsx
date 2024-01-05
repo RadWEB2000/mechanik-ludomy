@@ -1,3 +1,4 @@
+import { ContentBox } from "utils/Parts";
 import { FeaturedImage, Hero } from "views/PostPage";
 
 export default function HomePage() {
@@ -5,9 +6,7 @@ export default function HomePage() {
         <div>
             <Hero/>
             <FeaturedImage/>
-            <main className="container">
-       
-            </main>
+            <ContentBox/>
         </div>
     );
 }
