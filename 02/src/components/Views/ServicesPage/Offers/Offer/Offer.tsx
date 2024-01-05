@@ -16,7 +16,9 @@ export default function Offer(props:tOffer){
         <section className={css.wrapper}>
             <div className={css.container}>
                 <h2 className={css.title} dangerouslySetInnerHTML={{__html:props.title}} />
-                <p className={css.content} dangerouslySetInnerHTML={{__html:props.content}} />
+                <p className={css.content} dangerouslySetInnerHTML={{__html:props.content}} 
+                   
+                />
                 <ReadMoreButton
                     iconify
                     label={props.button}

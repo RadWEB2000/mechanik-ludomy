@@ -1,0 +1,69 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+margin:4rem 0;
+}
+
+.container {
+    @include flex(flex-start,flex-start,column,null,2rem);
+    border-radius: .45rem;
+    background-image:linear-gradient(to bottom right, #10101060,#10101062,#f95b2f77);
+    padding: 3rem;
+    position: relative;
+    & >* {
+        text-wrap:balance;
+    }
+    &::after,
+    &::before {
+        @include size(100%,.5rem);
+        background-color: #f95b2f;
+        top: 0;
+    }
+
+    &::after {
+        border-radius:2rem 0 0 2rem;
+        left: 0;
+    }
+    &::before {
+        border-radius:0 2rem 2rem 0;
+        right: 0;
+    }
+}
+
+.title {
+    @include font(5rem,900,1.2,null,null,start,$fontAnton);
+}
+
+.content {
+    @include font(2.1rem,400,1.5,null,null,start,null);
+    color: #ddd;
+    max-width: 75ch;
+}
+
+
+.cards {
+    @include flex(center,flex-start,column,null,4rem);
+    margin-top: 6rem;
+}
+
+@media only screen {
+    @media (min-width:650px){
+        .title {
+            font-size: 7rem;
+        }
+    }
+    @media (min-width:810px){
+        .title {
+            font-size: 9rem;
+        }
+    }
+    @media (min-width:810px){
+        .container {
+            padding: 7rem 9rem;
+        }
+        .title {
+            font-size: 12rem;
+        }
+    }
+}

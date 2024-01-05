@@ -1,5 +1,6 @@
 import { tImage } from "ts/types";
 import Offer from "views/ServicesPage/Offers/Offer/Offer";
+import css from "views/ServicesPage/Offers/Offers.module.scss"
 
 type tOffers = {
     cards : {
@@ -15,12 +16,12 @@ type tOffers = {
 
 export default function Offers(props:tOffers){
     return(
-        <div>
-            <section>
-                <h2 dangerouslySetInnerHTML={{__html:props.title}} />
-                <p dangerouslySetInnerHTML={{__html:props.content}} />
+        <div className={css.wrapper}>
+            <section className={css.container}>
+                <h2 className={css.title} dangerouslySetInnerHTML={{__html:props.title}} />
+                <p className={css.content} dangerouslySetInnerHTML={{__html:props.content}} />
             </section>
-            <ul>
+            <ul className={css.cards}>
                 {props.cards.map((item,index) => {
                     return(
                         <Offer

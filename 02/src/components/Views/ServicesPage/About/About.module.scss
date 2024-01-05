@@ -21,6 +21,7 @@
     & > .content {
         @include font(1.55rem,400,1.5,null,-.8px,start,null);
         color: #ddd;
+        max-width:75ch;
         padding-right: 2rem;
         text-wrap: balance;
     }
