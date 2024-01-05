@@ -31,7 +31,7 @@ export default function HomePage() {
             <main>
                 <ServicesOverview
                     button="Więcej"
-                    items={[
+                    items={ [
                         {
                             content:
                                 'Optio excepturi cum temporibus nostrum mollitia sint non. Non quas dol',

@@ -1,6 +1,7 @@
 import { Hero } from "utils/Parts"
 import logo from "assets/graphics/logo.png"
-import { About } from "views/ServicesPage";
+import { About,Offers } from "views/ServicesPage";
+import { offers } from "data/offers";
 
 export default function HomePage() {
     return (
@@ -19,6 +20,11 @@ export default function HomePage() {
                     }}
                     title="Mechanik Ludomy"
                     uri="#"
+               />
+               <Offers
+                    cards={offers}
+                    content={`Iure minus sint accusamus. Facere eligendi aut blanditiis. Veritatis cumque vitae cumque iste dolor est et pariatur ea. Sequi est temporibus autem provident labore rerum. Qui minima doloribus dicta doloremque et doloribus accusantium aut. Nostrum quisquam qui non ipsa tenetur laudantium. Nihil sed et et iusto incidunt maiores. Quia qui maiores nobis animi quod quidem cumque provident. Ratione necessitatibus atque et molestiae ut necessitatibus odio tempore. Dignissimos minima consequatur quos eaque neque ex blanditiis tenetur aliquam. Quia magni nobis quae aut cumque. Eos autem ipsum quis quo delectus recusandae. Laboriosam id amet ut laboriosam et nam. Perferendis sit soluta cumque eos fuga consequatur quo.`}
+                    title="Oferta mechanika samochodowego"
                />
             </main>
         </div>
