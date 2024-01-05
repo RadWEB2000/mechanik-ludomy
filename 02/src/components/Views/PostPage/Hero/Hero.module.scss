@@ -1,0 +1,79 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    width:clamp(3rem,120rem,95%);
+    margin: 7rem auto 2rem;
+    display: grid;
+    gap:2rem;
+    grid-template-areas: 
+        "breadcrumbs breadcrumbs breadcrumbs release release"
+        "heading heading heading heading heading"
+        "category category category category category"
+        "excerpt excerpt excerpt excerpt excerpt"
+        "excerpt excerpt excerpt excerpt excerpt"
+    ;
+}
+
+.breadcrumbs,
+.release {
+    height: 8rem;
+}
+
+.breadcrumbs {
+    @include flex(center,flex-start,row nowrap);
+    padding: 0rem 1rem;
+    grid-area: breadcrumbs;
+    & > li {
+        @include flex(center,flex-start,row nowrap,.15rem);
+        & > a {
+            @include font(1.72rem,600,1.2,uppercase,null,center,null);
+              transition:.12s linear color;
+                &:focus-within,
+                &:hover {
+                    color: #aaa;
+                }
+        }
+    }
+}
+
+.release {
+    @include flex(center,flex-end);
+    @include font(2.12rem,600,1.2,uppercase,null,center,null);
+    grid-area: release;
+
+}
+
+.category {
+    @include flex(center,flex-start);
+    padding: 0.4rem;
+    grid-area: category;
+    & > a {
+        @include flex(center,center);
+        @include font(1.9rem,500,1.2,null,null,center,null);
+        background-color: #111;
+        border-radius: 1dvh;
+        padding: 1.5rem 3rem;
+        transition:.12s linear background-color;
+        &:focus-within,
+        &:hover {
+            background-color: #323131;
+        }
+    }
+}
+
+.title {
+    grid-area: heading;
+    @include font(9rem,700,.95,null,null,start,$fontBlackOps);
+    padding: 3rem 0rem;
+    text-wrap: pretty;
+    color:#ff2f0b;
+}
+
+.excerpt {
+    @include font(2.1rem,500,1.5,null,null,start);
+    padding: 1.2rem;
+    color: #ddd;
+    grid-area: excerpt;
+    text-wrap: balance;
+}
