@@ -1,8 +1,9 @@
 import Image from "next/image";
-
+import css from "views/PostPage/FeaturedImage/FeaturedImage.module.scss";
 export default function FeaturedImage(){
     return (
-        <figure>
+        <div className={css.wrapper}>
+        <figure className={css.container}>
              <Image
                     alt={""}
                     blurDataURL=""
@@ -17,5 +18,6 @@ export default function FeaturedImage(){
                     quality={75}
                 />
         </figure>
+        </div>
     )
 }

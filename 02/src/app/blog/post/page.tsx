@@ -4,7 +4,7 @@ export default function HomePage() {
     return (
         <div>
             <Hero/>
-            {/* <FeaturedImage/> */}
+            <FeaturedImage/>
             <main className="container">
        
             </main>
