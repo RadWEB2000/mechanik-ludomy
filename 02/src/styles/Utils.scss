@@ -1,3 +1,4 @@
+@import "./Mixins.scss";
 @import "./Variables.scss";
 
 .blog__container {
@@ -24,4 +25,28 @@
 .container {
     margin:2rem auto 4rem;
     width:clamp(5rem,125rem,95%);
+}
+
+.services__page {
+    // background: red;
+    display: grid;
+    // position: relative;
+    grid-template-columns: repeat(27,1fr);
+    width:clamp(5rem,165rem,95%);
+    & > article {
+        grid-column: 1/20;
+    }
+    & > aside {
+        @include flex(flex-start,flex-start,column,null, 1rem);
+        position: sticky;
+        top: 2rem;
+        grid-column: 20/-1;
+        & > div {
+        @include flex(flex-start,flex-start,column,null, 1rem);
+            background-color: #111;
+            border-radius: .2dvw;
+            padding: 3rem 3rem;
+            width: 100%;
+        }
+    }
 }
