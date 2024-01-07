@@ -2,26 +2,30 @@ import { tImage } from "ts/types";
 import Image from "next/image";
 import Link from "next/link";
 import css from "utils/Cards/BlogCard/BlogCard.module.scss"
+import {FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type tBlogCard = {
   
-    image:tImage;
     title:string;
-    excerpt:string;
-    button:string;
     uri:string;
 } & (
     {
+        direction:"left"|"right";
         theme:"receommended",
-        category:{
-            label:string;
-            uri:string;
-        };
+        
     } |{
+        button:string;
+        excerpt:string;
+        image:tImage;
         theme:"regural"
     } 
 )
 
+type tRecommendedBlogCard = {
+    direction:"left"|"right";
+    title:string;
+    uri:string;
+}
 
 type tReguralBlogCard = {
     image:tImage;
@@ -33,9 +37,25 @@ type tReguralBlogCard = {
 
 
 
+function RecommendedBlogCard(props:tRecommendedBlogCard){
+    return(
+        <div  className={css.recommended__wrapper} data-direction={props.direction}>
+            <Link href={props.uri}>
+                <i>
+                    {props.direction === "left" ? <FaChevronLeft />
+ : <FaChevronRight />
+ }
+                </i>
+                <p>{props.title}</p>
+            </Link>
+        </div>
+    )
+}
+
+
 function RegularBlogCard(props:tReguralBlogCard){
     return(
-        <li className={css.recommended__wrapper}>
+        <li className={css.regular__wrapper}>
             <figure>
                  <Image
                     alt={props.image.altText}
@@ -66,5 +86,6 @@ function RegularBlogCard(props:tReguralBlogCard){
 
 
 export default function BlogCard(props:tBlogCard){
-    if(props.theme === "regural") return <RegularBlogCard {...props} />
+    if(props.theme === "regural"){ return <RegularBlogCard {...props} />}
+    else if(props.theme === "receommended"){ return <RecommendedBlogCard {...props} />}
 }
