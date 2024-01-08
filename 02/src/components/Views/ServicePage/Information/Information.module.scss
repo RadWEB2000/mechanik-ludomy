@@ -1,0 +1,51 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(flex-start,flex-start,column,null,1rem);
+    background-color: #121212;
+    border-radius: 1rem;
+    padding: 3rem;
+    width: 100%;
+    & >* {
+        width: 100%;
+    }
+}
+
+.address,
+.contact {
+    @include flex(center,flex-start, row nowrap,1rem,null);
+    cursor: default;
+    & > i {
+        @include flex(center,center);
+        @include size(3.5rem,3.5rem);
+        color: orangered;
+        margin: auto 0;
+        font-size: 3rem;
+    }
+     & > span {
+        @include font(1.8rem,500,null,null,null,start);
+        font-style: normal;
+        transition:.14s linear color;
+     }
+ }
+
+.contact {
+    cursor: pointer;
+    &:last-of-type {
+        margin-bottom: 1rem;
+    }
+    &:focus-within,
+    &:hover{
+            & >span{
+                color: orangered;
+            }
+    }
+}
+
+.title {
+    @include font(3rem,600,null,uppercase,null,start);
+    border-bottom:1px solid orangered;
+    position: relative;
+    margin-bottom: 1rem;
+}

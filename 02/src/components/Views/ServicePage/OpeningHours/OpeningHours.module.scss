@@ -1,0 +1,35 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(flex-start,flex-start,column,null,1rem);
+    background-color: #121212;
+    border-radius: 1rem;
+    padding: 3rem;
+    width: 100%;
+    & >* {
+        width: 100%;
+    }
+}
+
+.title {
+    @include font(3rem,600,null,uppercase,null,start);
+    border-bottom:1px solid orangered;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.days {
+    @include flex(flex-start,flex-start,column,null,.56rem);
+}
+
+.day {
+    @include flex(flex-start,flex-start,row nowrap,1rem,null);
+    & >* { 
+        @include font(1.8rem,500,null,null,null,start,null);
+    }
+    & > b {
+        font-weight: 800;
+        color: orangered;
+    }
+}

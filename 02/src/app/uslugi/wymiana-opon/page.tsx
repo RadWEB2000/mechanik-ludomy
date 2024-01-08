@@ -1,6 +1,5 @@
-import { ReadMoreButton } from "utils/Buttons";
-import Link from "next/link";
 import { ContentBox, Hero } from "utils/Parts"
+import { Information, OpeningHours } from "views/ServicePage";
 
 export default function HomePage() {
     return (
@@ -13,27 +12,29 @@ export default function HomePage() {
                     <ContentBox/>
                 </article>
                 <aside>
-                    <div>
-                        <h2>Skontaktuj się z nami</h2>
-                        <address>
-                            Ludomy 12, 64-020 Ludomy
-                        </address>
-                        <Link href="#">+48 794-100-413</Link>
-                        <Link href="#">radoslaw.adamczyk@gmail.com</Link>
-                        <ReadMoreButton
-                            iconify
-                            label="Zadzwoń"
-                            uri="#"
-                            theme="primary"
-                        />
-                    </div>
-                    <div>
-                        <h2>Godziny otwarcia</h2>
-                        <ul>
-                            <li><b>Pn-Pt</b><span>8:00-16:00</span></li>
-                            <li><b>Sb-Nd</b><span>Nieczynne</span></li>
-                        </ul>
-                    </div>
+                    <Information
+                        phone={{
+                            label:"+48 500-361-007",
+                            url:"tel:+48500361007"
+                        }}
+                        address="Ludomy 93, 64-603 Ludomy"
+                        button="Zadzwoń"
+                        title="Skontaktuj się z nami"
+                        uri="#"
+                    />
+                    <OpeningHours
+                        days={[
+                            {
+                                content:"8:00-16:00",
+                                title:"Pn-Pt"
+                            },
+                            {
+                                content:"Nieczynne",
+                                title:"Sb-Nd"
+                            },
+                        ]}
+                        title="Godziny otwarcia"
+                    />
                 </aside>
             </main>
         </div>
