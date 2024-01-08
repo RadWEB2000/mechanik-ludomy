@@ -79,7 +79,7 @@ export const offers:t_offers[] = [
             sourceUrl:"https://img.freepik.com/free-photo/aerial-view-car-riding-through-road-forest-with-tall-green-dense-trees_181624-37805.jpg?w=996&t=st=1704461782~exp=1704462382~hmac=0967c2ac4b58cf1790d4ede79372d96df4708bc6818d8d7eac1cd3143869c00d",
             title:"",
         },
-        title:"Wymiana układu hotelowego",
+        title:"Wymiana układu hamulcowego",
         isMain:false,
         uri:"#"
     },

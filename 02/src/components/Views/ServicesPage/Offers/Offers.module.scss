@@ -9,7 +9,7 @@ margin:4rem 0;
     @include flex(flex-start,flex-start,column,null,2rem);
     border-radius: .45rem;
     background-image:linear-gradient(to bottom right, #10101060,#10101062,#f95b2f77);
-    padding: 3rem;
+    padding: 3rem 1rem;
     position: relative;
     & >* {
         text-wrap:balance;
@@ -32,11 +32,11 @@ margin:4rem 0;
 }
 
 .title {
-    @include font(5rem,900,1.2,null,null,start,$fontAnton);
+    @include font(4.8rem,900,1.2,null,null,start,$fontAnton);
 }
 
 .content {
-    @include font(2.1rem,400,1.5,null,null,start,null);
+    @include font(1.7rem,400,1.7,null,null,start,null);
     color: #ddd;
     max-width: 75ch;
 }

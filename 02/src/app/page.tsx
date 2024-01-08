@@ -171,24 +171,14 @@ export default function HomePage() {
                     title="Usługi mechanika w Ludomach"
                     uri="#"
                 />
-                <Blog
+                {/* <Blog
                     button="Wszystkie wpisy"
                     cards={articles}
                     content={`Numquam consequatur est mollitia. Neque quasi accusantium voluptatum ipsam. Ab saepe cupiditate aperiam voluptas accusantium ipsam quis nemo. Vel voluptate sed molestiae voluptatem voluptatum. iure. Vero distinctio eius in. A aperiam dolorem quis nesciunt. Adipisci quibusdam quae quidem quasi officiis. Dolores voluptates soluta. Est deleniti error quis inventore eveniet. Consequuntur animi aperiam voluptate quis perferendis vero est.`}
                     title="Blog"
                     uri="#"
-                />
+                /> */}
                 <AutomotiveBrands cards={automotiveBrands} />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ullam
-                possimus? Ea qui quibusdam labore culpa iusto nemo temporibus modi nihil dolorum
-                amet aut neque doloremque nobis eius dolore, quidem a quaerat fuga cumque sit velit
-                nam impedit at quasi? Ullam sed iste ad praesentium rem exercitationem quo quisquam
-                corporis dolores quod. Corporis veniam magnam accusamus quos vel? Beatae qui rem
-                eveniet eum tenetur dolor! Voluptatibus amet sint perferendis deleniti esse fugit
-                autem, earum culpa nihil illo unde sunt natus sapiente vitae consectetur placeat,
-                voluptate saepe odit nesciunt fuga magnam ullam? In eaque beatae aperiam animi est,
-                obcaecati nisi necessitatibus sequi enim impedit voluptate tenetur earum eveniet
-                sunt eos laboriosam velit vero dolore modi fuga eligendi totam? Earum, culpa velit.
             </main>
         </div>
     );

@@ -1,0 +1,19 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-end, row nowrap,.6rem);
+    height: 100%;
+}
+
+.icon {
+    @include flex(center,center);
+    aspect-ratio: 1/1;
+    font-size: 2.3rem;
+    height: 95%;
+}
+
+.label {
+    @include font(1.6rem,500,1.2,null,null,end,null);
+    font-style: normal;
+}

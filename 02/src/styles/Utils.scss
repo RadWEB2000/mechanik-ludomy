@@ -28,19 +28,32 @@
 }
 
 .services__page {
-    // background: red;
     display: grid;
-    // position: relative;
     grid-template-columns: repeat(27,1fr);
     width:clamp(5rem,165rem,95%);
     & > article {
-        grid-column: 1/20;
+        grid-column: 1/-1;
     }
     & > aside {
-        @include flex(flex-start,flex-start,column,null, 1rem);
-        position: sticky;
-        top: 2rem;
+        display: none;
         grid-column: 20/-1;
+        position: relative;
+        &>  div {
+            @include flex(flex-start,flex-start,column,null,1rem);
+            position: sticky;
+            top: 13rem;
+        }
        
+    }
+
+    @media only screen {
+        @media (min-width:1100px){
+            & > article {
+                grid-column: 1/20;
+            }
+            & > aside {
+                display: block;
+            }
+        }
     }
 }

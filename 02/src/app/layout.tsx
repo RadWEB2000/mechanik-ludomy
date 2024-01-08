@@ -1,7 +1,9 @@
+import Navigation from 'app/components/Layout/Navigation/Navigation';
+import { menu } from 'app/data/menu';
+import LayoutProvider from 'context/LayoutContext';
+import logo from "assets/graphics/logo.png";
 import 'css/Global.scss';
 import 'css/Utils.scss';
-// import 'css/Mixins.scss';
-// import 'css/Variables.scss';
 
 export const metadata = {
     title: '🚗 Mechanik Ludomy, Ryczywół, Oborniki - Patryk Łusiewicz',
@@ -14,7 +16,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <head>
                 <meta name="robots" content="noindex nofollow" />
             </head>
-            <body>{children}</body>
+            <body>
+                <LayoutProvider>
+                <Navigation
+                    brand={{
+                        image:{
+                            altText:"",
+                            sourceUrl:logo.src,
+                            title:""
+                        },
+                        uri:"/"
+                    }}
+                    location={{
+                        address:"Ludomy 93, 64-603 Ludomy",
+                        url:"https://www.google.com/maps?sca_esv=596546401&output=search&q=patryk+%C5%82usiewicz&source=lnms&entry=mc"
+                    }}
+                    menu={menu}
+                    settings={{
+                        menuButton:"Menu"
+                    }}
+                />
+                    {children}
+                </LayoutProvider>
+            </body>
         </html>
     );
 }

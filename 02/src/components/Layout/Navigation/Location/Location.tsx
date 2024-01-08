@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaRegMap } from "react-icons/fa6";
+import css from "layout/Navigation/Location/Location.module.scss";
 
 type tLocation = {
     address:string;
@@ -8,13 +9,11 @@ type tLocation = {
 
 export default function Location(props:tLocation) {
     return (
-        <div>
-            <Link href={props.url}>
-                <i>
-                    <FaRegMap />
-                </i>
-                <address>{props.address}</address>
-            </Link>
-        </div>
+        <Link className={css.wrapper} href={props.url}>
+            <i className={css.icon} >
+                <FaRegMap />
+            </i>
+            <address className={css.label} >{props.address}</address>
+        </Link>
     );
 }

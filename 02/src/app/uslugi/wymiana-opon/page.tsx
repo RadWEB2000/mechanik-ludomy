@@ -12,6 +12,7 @@ export default function HomePage() {
                     <ContentBox/>
                 </article>
                 <aside>
+                    <div>
                     <Information
                         phone={{
                             label:"+48 500-361-007",
@@ -35,6 +36,7 @@ export default function HomePage() {
                         ]}
                         title="Godziny otwarcia"
                     />
+                    </div>
                 </aside>
             </main>
         </div>
