@@ -1,0 +1,42 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(flex-start,flex-start,column,1.2rem);
+    color: #fff;
+    & >* {
+        width: 100%;
+    }
+}
+
+.title {
+    @include font(5.2rem,800,null,null,null,start,$fontAnton);
+    margin-bottom: 2rem;
+}
+
+.address,
+.contact {
+    @include flex(center,flex-start,row nowrap,1rem);
+    color: #ddd;
+    & > i {
+        @include flex(center,center);
+        @include size(4.5rem,4.5rem);
+        font-size: 3rem;
+    }
+    & > span {
+        @include font(1.7rem,600,1,null,null,start,null);
+        font-style: normal;
+    }
+}
+
+.address {
+    cursor: default;
+}
+
+.contact {
+    transition:.12s linear color;
+    &:focus-within,
+    &:hover {
+        color: orangered;
+    }
+}

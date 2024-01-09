@@ -1,8 +1,7 @@
-import { About, AutomotiveBrands, Blog, Hero, Services, ServicesOverview } from 'views/HomePage';
+import { About, AutomotiveBrands,  Hero, Services, ServicesOverview } from 'views/HomePage';
 import { FaCar, FaHandsHelping } from 'react-icons/fa';
 import mechanicImage from 'assets/graphics/patryk-profile-image.jpg';
 import { automotiveBrands } from 'data/automotiveBrands';
-import { articles } from 'data/articles';
 
 export default function HomePage() {
     const img =
@@ -171,13 +170,7 @@ export default function HomePage() {
                     title="Usługi mechanika w Ludomach"
                     uri="#"
                 />
-                {/* <Blog
-                    button="Wszystkie wpisy"
-                    cards={articles}
-                    content={`Numquam consequatur est mollitia. Neque quasi accusantium voluptatum ipsam. Ab saepe cupiditate aperiam voluptas accusantium ipsam quis nemo. Vel voluptate sed molestiae voluptatem voluptatum. iure. Vero distinctio eius in. A aperiam dolorem quis nesciunt. Adipisci quibusdam quae quidem quasi officiis. Dolores voluptates soluta. Est deleniti error quis inventore eveniet. Consequuntur animi aperiam voluptate quis perferendis vero est.`}
-                    title="Blog"
-                    uri="#"
-                /> */}
+         
                 <AutomotiveBrands cards={automotiveBrands} />
             </main>
         </div>

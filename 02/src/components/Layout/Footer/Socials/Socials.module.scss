@@ -2,7 +2,7 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    @include flex(flex-start,flex-start,column,null,1rem);
+    @include flex(flex-start,flex-start,row wrap,1rem,1rem);
 }
 
 .item {

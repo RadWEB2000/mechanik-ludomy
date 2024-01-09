@@ -1,0 +1,23 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    &,
+    & >* {
+        display: inline-block;
+    }
+    & > p {
+        margin-left: 1rem;
+    }
+    & >* {
+        @include font(1.8rem,600,1.2,null,null,start,null);
+    }
+
+    & >a {
+        transition:.15s linear color;
+        &:focus-within,
+        &:hover {
+            color: orangered;
+        }
+    }
+}

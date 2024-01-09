@@ -1,0 +1,46 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+    padding-bottom: 1rem;
+}
+
+.company {
+    @include flex(center,center,column,null,2rem);
+    grid-column: 1/-1;
+    grid-row: 1;
+    padding: 2rem;
+}
+
+.menu {
+    @include flex(center,flex-end);
+    grid-column: 1/-1;
+    grid-row: 2;
+}
+
+.author {
+    grid-column: 1/-1;
+    grid-row: 3;
+    padding: 2rem;
+}
+
+@media only screen {
+    @media (min-width:1000px){
+        .company {
+            grid-column: 1/11;
+            grid-row: 1;
+            min-height: 40rem;
+        }
+        .menu {
+            grid-column: 11/-1;
+            grid-row: 1;
+            min-height: 40rem;
+
+        }
+        .author {
+            grid-row: 2;
+        }
+    }
+}
