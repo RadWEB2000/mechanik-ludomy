@@ -2,18 +2,34 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    @include flex(center,flex-end, row nowrap,.6rem);
+    @include flex(center,flex-end, row nowrap,.1rem);
+    color: rgb(255, 147, 107);
     height: 100%;
+    padding: 0rem 0.5rem 0rem 0rem;
 }
 
 .icon {
     @include flex(center,center);
     aspect-ratio: 1/1;
-    font-size: 2.3rem;
+    font-size: 1.6rem;
     height: 95%;
 }
 
 .label {
-    @include font(1.6rem,500,1.2,null,null,end,null);
+    @include font(1.45rem,500,1.2,null,null,end,null);
     font-style: normal;
+}
+
+@media only screen {
+    @media (min-width:1300px){
+        .wrapper {
+            padding: 0rem 2dvw 0rem 0rem;
+        }
+        .icon {
+            font-size: 2rem;
+        }
+        .label {
+            font-size: 1.6rem;
+        }
+    }
 }

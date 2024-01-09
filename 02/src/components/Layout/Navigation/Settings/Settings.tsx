@@ -1,4 +1,5 @@
 import { MenuButton } from "utils/Buttons";
+import css from "layout/Navigation/Settings/Settings.module.scss";
 
 type tSettings = {
     menuButton:string;
@@ -6,7 +7,7 @@ type tSettings = {
 
 export default function Settings(props:tSettings){
     return (
-        <div>
+        <div className={css.wrapper}>
             <MenuButton
                 label={props.menuButton}
             />

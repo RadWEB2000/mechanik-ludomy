@@ -1,0 +1,33 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+
+.box {
+    @include flex(flex-start,flex-start,column,null,.85rem);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+
+@media only screen {
+    @media (max-width:869.9px){
+            .wrapper {
+                width: 100%;
+            }
+
+    }
+    @media (min-width:870px){
+        .wrapper {
+            position: relative;
+            width: unset;
+        }
+            .box {
+                background-color: #131313;
+                border-radius: 0 .5rem .5rem .5rem;
+                position: absolute;
+                overflow: hidden;
+                width: 22rem;
+            }
+
+    }
+}

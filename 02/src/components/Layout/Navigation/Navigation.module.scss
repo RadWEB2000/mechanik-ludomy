@@ -2,20 +2,19 @@
 @import "../../../styles/Variables.scss";
 
 .wrapper {
+    @include size(auto,100%);
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 7.5rem calc(100% - 7.5rem);
+    grid-template-rows: 4.5rem 4.5rem 0;
     position: sticky;
     top: 0;
-    background-color: #000;
-    height: auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 10rem calc(100% - 10rem);
-    grid-template-rows: 4.5rem 4.5rem 0;
+    transition:.32s ease-in-out all;
     z-index: 999;
-    overflow-x: hidden;
-    transition: .12s ease-in-out height;
     &[data-open-nav=true]{
-        grid-template-rows: 4.5rem 4.5rem calc(100% - 9rem);
-        height: 100vh;
+        background-color: #121212;
+        grid-template-rows: 4.5rem 4.5rem calc(100vh - 9rem);
+        transition:.32s ease-in-out all;
          .menu {
             height:100%;
         }
@@ -32,35 +31,57 @@
 .location {
     grid-column: 2;
     grid-row: 1;
-    padding: 0rem 2rem;
-    background: blue;
-    @include flex(center,flex-end, row nowrap);
     height: 100%;
     // padding: 0rem 2rem;
 }
 
 .settings {
-    background: salmon;
     grid-column: 2;
     grid-row: 2;
-    &, 
-    & > div {
-        @include flex(center,flex-end,row nowrap);
-    }
-    & > div {
-        background: lime;
-        padding: 0rem 2rem;
-        height: 100%;
-        width: 100%;
-    }
+   
 }
 
 .menu {
-    background: brown;
-            height: 0;
-    transition: .12s ease-in-out height;
+    height: 0;
+    transition: .32s ease-in-out height;
     overflow: hidden;
     grid-column: 1/-1;
     grid-row: 3;
 }
 
+@media only screen {
+    @media (min-width:870px){
+            .wrapper {
+                grid-template-columns: 12rem calc(100% - 12rem);
+                grid-template-rows: 4.5rem 6rem 0;
+                transition:.32s ease-in-out all;
+                &[data-open-nav=true]{
+                    grid-template-rows: 4.5rem 6rem 0;
+                    .menu {
+                        height:100%;
+                    }
+                }
+            }
+
+            .brand {
+                padding: 2rem;
+            }
+
+            .settings {
+                display: none;
+            
+            }
+            .menu {
+                height: 100%;
+                overflow: visible;
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+    }
+    @media (min-width:1300px){
+        .brand {
+            padding: 0.45rem;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-end);
+    @include size(100%,100%);
+    padding: 0rem 2rem 0rem 0rem;
+}

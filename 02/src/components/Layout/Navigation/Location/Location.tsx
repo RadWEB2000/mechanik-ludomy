@@ -9,7 +9,7 @@ type tLocation = {
 
 export default function Location(props:tLocation) {
     return (
-        <Link className={css.wrapper} href={props.url}>
+        <Link className={css.wrapper} href={props.url} target='_blank' rel="noindex nofollow">
             <i className={css.icon} >
                 <FaRegMap />
             </i>

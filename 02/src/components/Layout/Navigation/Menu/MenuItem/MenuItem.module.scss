@@ -1,0 +1,80 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+.expand, .regural {
+    @include flex(center,flex-start,row nowrap,1rem);
+    height: 4rem;
+    & > a {
+        @include font(2.5rem,600);
+        padding: 0rem 0.5rem;
+        position: relative;
+        &::before {
+            @include size(3.5px,0%);
+            background-color: #fff;
+            bottom: 0;
+            left: 0;
+            transition: .12s linear width;
+        }
+        &:focus-within,
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.expand {
+    & > button {
+        @include flex(center,center);
+        aspect-ratio: 1/1;
+        background: #fff;
+        font-size: 2.7rem;
+        height: 90%;
+        transition:.12s ease-in-out transform;
+
+        &:focus-within,
+        &:hover {
+            transform: scale(.92)
+        }
+    }
+}
+
+.submenu {
+    & > a {
+        @include font(1.95rem,500,null,null,null,start,null);
+        color: #cccccc;
+        display: block;
+        padding: 0rem 0.5rem;
+        transition:.12s linear color;
+        &:focus-within,
+        &:hover {
+            color: #eeeeee;
+        }
+    }
+}
+
+@media only screen {
+    @media (min-width:870px){
+            .expand, .regural {
+                height: 4.5rem;
+                & > a {
+                    font-size: 2rem;
+                }
+            }
+
+            .expand {
+                & > button {
+                    font-size: 3.2rem;
+                    height: 95%;
+                }
+            }
+
+            .submenu {
+                & > a {
+                    font-size: 1.75rem;
+                }
+            }
+
+    }
+}
