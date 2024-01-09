@@ -1,0 +1,25 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(flex-start,flex-start,column,null,1rem);
+}
+
+.item {
+    @include flex(center,flex-start,row nowrap,1.2rem);
+    border-radius: .4rem;
+    height: 5rem;
+    padding: 0 2rem;
+    transition:.12s ease-in-out filter;
+    user-select: none;
+}
+
+.icon {
+    @include flex(center,center);
+    @include size(4.25rem,4.25rem);
+    font-size: 3rem;
+}
+
+.label {
+    @include font(1.78rem,700,1,null,null,start,null);
+}
