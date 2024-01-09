@@ -2,11 +2,11 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    position: relative;
-    background-color: #ff300ba2;
+    aspect-ratio: 16/12;
+    background-color: rgba($red,0.635);
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    aspect-ratio: 16/12;
+    position: relative;
     width: 100%;
 
 }

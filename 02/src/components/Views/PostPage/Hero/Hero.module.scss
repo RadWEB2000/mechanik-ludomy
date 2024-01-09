@@ -2,8 +2,6 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    width:clamp(3rem,120rem,90%);
-    margin: 7rem auto 2rem;
     display: grid;
     gap:1rem;
     grid-template-areas: 
@@ -13,6 +11,8 @@
         "excerpt excerpt excerpt excerpt excerpt"
         "excerpt excerpt excerpt excerpt excerpt"
     ;
+    margin: 7rem auto 2rem;
+    width:clamp(3rem,120rem,90%);
 }
 
 .breadcrumbs,
@@ -22,8 +22,8 @@
 
 .breadcrumbs {
     @include flex(center,flex-start,row nowrap);
-    padding: 0rem 1rem;
     grid-area: breadcrumbs;
+    padding: 0rem 1rem;
     & > li {
         @include flex(center,flex-start,row nowrap,.15rem);
         & > a {
@@ -31,7 +31,7 @@
               transition:.12s linear color;
                 &:focus-within,
                 &:hover {
-                    color: #aaa;
+                    color: $silver;
                 }
         }
     }
@@ -51,13 +51,13 @@
     & > a {
         @include flex(center,center);
         @include font(1.9rem,500,1.2,null,null,center,null);
-        background-color: #111;
+        background-color: $night;
         border-radius: 1dvh;
         padding: 1.5rem 3rem;
         transition:.12s linear background-color;
         &:focus-within,
         &:hover {
-            background-color: #323131;
+            background-color: $jet;
         }
     }
 }
@@ -67,13 +67,13 @@
     @include font(4.75rem,700,.95,null,null,start,$fontBlackOps);
     padding: 1.2rem 0rem;
     text-wrap: pretty;
-    color:#ff2f0b;
+    color:$tangelo;
 }
 
 .excerpt {
     @include font(1.9rem,550,1.9,null,null,start);
     padding: 1.2rem;
-    color: #ddd;
+    color: $platinum;
     grid-area: excerpt;
     text-wrap: balance;
 }

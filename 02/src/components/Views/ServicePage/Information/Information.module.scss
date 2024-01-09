@@ -3,7 +3,7 @@
 
 .wrapper {
     @include flex(flex-start,flex-start,column,null,1rem);
-    background-color: #121212;
+    background-color: $night;
     border-radius: 1rem;
     padding: 3rem;
     width: 100%;
@@ -19,7 +19,7 @@
     & > i {
         @include flex(center,center);
         @include size(3.5rem,3.5rem);
-        color: orangered;
+        color: $tangelo;
         margin: auto 0;
         font-size: 3rem;
     }
@@ -37,15 +37,15 @@
     }
     &:focus-within,
     &:hover{
-            & >span{
-                color: orangered;
-            }
+        & >span{
+            color: $tangelo;
+        }
     }
 }
 
 .title {
     @include font(3rem,600,null,uppercase,null,start);
-    border-bottom:1px solid orangered;
-    position: relative;
+    border-bottom:1px solid $tangelo;
     margin-bottom: 1rem;
+    position: relative;
 }

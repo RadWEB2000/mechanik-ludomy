@@ -3,13 +3,11 @@
 
 
 .wrapper {
-    // background: pink;
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(21,1fr);
     margin: auto;
     width:clamp(5rem,145rem,95%);
-    gap: 1rem;
-
     & > * {
         grid-column: 1/-1;
     }
@@ -20,7 +18,7 @@
     padding: 2rem;
     & > .title {
         @include font(7rem,700,1.2,null,null,start,$fontAnton);
-        color:#fd470f;
+        color:$tangelo;
     }
 
     & > .content {
@@ -34,19 +32,18 @@
 .motto {
     @include flex(center,center);
     @include font(7rem,900,1.2,null,1.4px,center,$fontAlfa);
-    color: rgba(255, 217, 0, 0);
+    color: rgba($black, 0);
     grid-row: 1;
-    -webkit-text-stroke: 1px #808080;
+    -webkit-text-stroke: 1px $silver;
 }
 
 .image {
-    background: purple;
     aspect-ratio: 4/4.2;
-    padding: 1rem;
     border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
     grid-row: 3;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
 }
 
 @media only screen {

@@ -1,6 +1,8 @@
+@import "../../../../styles/Variables.scss";
+
 .wrapper {
-    width:clamp(5rem,105ch,90%);
     margin:4rem auto;
+    width:clamp(5rem,105ch,90%);
 }
 
 .h2,.h3,.h4,.h5 {
@@ -11,35 +13,34 @@
 
 
 .h2 {
-    font-size: 5rem;
     color:rgb(225, 59, 50);
+    font-size: 5rem;
 }
 
 .h3 {
-    font-size: 4rem;
     color:rgb(225, 95, 50);
+    font-size: 4rem;
 }
 .h4 {
-    font-size: 3rem;
     color:rgb(215, 91, 69);
+    font-size: 3rem;
     
 }
 .h5 {
-    font-size: 2.4rem;
     color:rgb(225, 76, 50);
+    font-size: 2.4rem;
 
 }
 
 .i,.b,.p,.li,.a {
-font-size: 2.1rem;
-font-size: 1.7rem;
+    font-size: 1.7rem;
     line-height: 1.9;
     text-wrap:pretty;
 }
 
 .p {
     
-    color: #ccc;
+    color: $platinum;
     margin-bottom: 2rem;
 }
 
@@ -75,7 +76,7 @@ font-size: 1.7rem;
 .ol,.ul {
     padding: 1rem;
     .li {
-        color: #fff;
+        color: $white;
         list-style-position: inside;
         padding: 0.8rem;
     }

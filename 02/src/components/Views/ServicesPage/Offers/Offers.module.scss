@@ -2,13 +2,13 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-margin:4rem 0;
+    margin:4rem 0;
 }
 
 .container {
     @include flex(flex-start,flex-start,column,null,2rem);
     border-radius: .45rem;
-    background-image:linear-gradient(to bottom right, #10101060,#10101062,#f95b2f77);
+    background-image:$offerPageContainerGradeint;
     padding: 3rem 1rem;
     position: relative;
     & >* {
@@ -17,7 +17,7 @@ margin:4rem 0;
     &::after,
     &::before {
         @include size(100%,.5rem);
-        background-color: #f95b2f;
+        background-color: $giantsOrange;
         top: 0;
     }
 
@@ -37,7 +37,7 @@ margin:4rem 0;
 
 .content {
     @include font(1.7rem,400,1.7,null,null,start,null);
-    color: #ddd;
+    color: $platinum;
     max-width: 75ch;
 }
 
