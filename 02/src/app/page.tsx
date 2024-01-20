@@ -1,6 +1,5 @@
 import { About, AutomotiveBrands, Hero, Services, ServicesOverview } from 'views/HomePage';
 import { FaCar, FaHandsHelping } from 'react-icons/fa';
-import mechanicImage from 'assets/graphics/patryk-profile-image.jpg';
 import { automotiveBrands } from 'data/automotiveBrands';
 import { home } from 'app/content/pages/home';
 

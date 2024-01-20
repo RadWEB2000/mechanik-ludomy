@@ -38,7 +38,7 @@ type t_home = {
     services: {
         title: string;
         excerpt: string;
-        content?: string;
+        content: string;
         button: {
             label: string;
             uri: string;
