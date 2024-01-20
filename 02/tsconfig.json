@@ -28,6 +28,7 @@
         "css/*": ["./src/styles/*"],
         "data/*": ["./src/data/*"],
         "functions/*": ["./src/lib/functions/*"],
+        "graphics/*":["./src/assets/graphics/*"],
         "hooks/*": ["./src/lib/hooks/*"],
         "layout/*": ["./src/components/Layout/*"],
         "l_nav/*": ["./src/components/Layout/Navigation/*"],

@@ -1,15 +1,20 @@
-import { tImage } from 'ts/types';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import css from 'views/HomePage/About/About.module.scss';
 import { ReadMoreButton } from 'utils/Buttons';
 
 type tAbout = {
-    button: string;
+    button?: {
+        label: string;
+        uri: string;
+    };
     content: string;
-    motto: string;
-    image: tImage;
+    slogan: string;
+    image: {
+        alt: string;
+        src: string | StaticImageData;
+        title: string;
+    };
     title: string;
-    uri: string;
 };
 
 export default function About(props: tAbout) {
@@ -18,21 +23,28 @@ export default function About(props: tAbout) {
             <section className={css.box}>
                 <h2 className={css.title}>{props.title}</h2>
                 <p className={css.content} dangerouslySetInnerHTML={{ __html: props.content }} />
-                <ReadMoreButton iconify label={props.button} theme="secondary" uri={props.uri} />
+                {props.button && (
+                    <ReadMoreButton
+                        iconify
+                        label={props.button.label}
+                        theme="secondary"
+                        uri={props.button.uri}
+                    />
+                )}
             </section>
-            <p className={css.motto} dangerouslySetInnerHTML={{ __html: props.motto }} />
+            <p className={css.motto} dangerouslySetInnerHTML={{ __html: props.slogan }} />
             <figure className={css.image}>
                 <Image
-                    alt={props.image.altText}
+                    alt={props.image.alt}
                     blurDataURL=""
                     fill
                     loading="lazy"
-                    src={props.image.sourceUrl}
+                    src={props.image.src}
                     style={{
                         objectFit: 'cover',
                         objectPosition: 'center',
                     }}
-                    title={props.image.altText}
+                    title={props.image.title}
                     quality={75}
                 />
             </figure>
